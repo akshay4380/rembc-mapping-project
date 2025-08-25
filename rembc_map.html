@@ -1,0 +1,2141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8c6d16bc1b48fd09a8a4f3d1334580c7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+                 bottom: 30px; left: 30px; width: 220px; z-index:9999; font-size:14px;
+                 background-color: white; padding: 10px; border: 2px solid #444; border-radius: 8px;">
+     <b>Initiative Legend</b><br>
+     <i style="background: blue; width: 10px; height: 10px; float: left; margin-right: 8px;"></i> High School Mentoring<br>
+     <i style="background: green; width: 10px; height: 10px; float: left; margin-right: 8px;"></i> Rural Pre-Health Stream<br>
+     <i style="background: red; width: 10px; height: 10px; float: left; margin-right: 8px;"></i> REAP Presentation<br>
+     <hr style="margin: 6px 0;">
+     <div>Use the layer control (top-right) to toggle by Year and Initiative.</div>
+     </div>
+     
+    
+            <div class="folium-map" id="map_8c6d16bc1b48fd09a8a4f3d1334580c7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8c6d16bc1b48fd09a8a4f3d1334580c7 = L.map(
+                "map_8c6d16bc1b48fd09a8a4f3d1334580c7",
+                {
+                    center: [54.0, -125.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f574cc03c74091b55f08dc370a790804 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var feature_group_6dd466f8ba6a395c9f68eb731946d1e8 = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_7b1ab964cb68c1f69af6595bfd82cfb0 = L.circleMarker(
+                [55.7606, -120.235],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_b6b1906755bd78ea0beed17d2f8bfcf8 = L.popup({"maxWidth": 300});
+
+        
+            var html_2ca97ff05b217c68d9a3eb3b66d21baa = $(`<div id="html_2ca97ff05b217c68d9a3eb3b66d21baa" style="width: 100.0%; height: 100.0%;">             <b>Dawson Creek Elem School</b><br>             Community: Dawson Creek<br>             Year: 2021<br>             Initiative: High School Mentoring<br>             Students reached: 125<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_b6b1906755bd78ea0beed17d2f8bfcf8.setContent(html_2ca97ff05b217c68d9a3eb3b66d21baa);
+        
+
+        circle_marker_7b1ab964cb68c1f69af6595bfd82cfb0.bindPopup(popup_b6b1906755bd78ea0beed17d2f8bfcf8)
+        ;
+
+        
+    
+    
+            var circle_marker_a3cded54fbbf8e336f4a56709b887caf = L.circleMarker(
+                [49.888, -119.496],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_0b7701c43258b3a7db825482ffbfb963 = L.popup({"maxWidth": 300});
+
+        
+            var html_7c7aff602ed300affd2c81e4e9a77690 = $(`<div id="html_7c7aff602ed300affd2c81e4e9a77690" style="width: 100.0%; height: 100.0%;">             <b>Kelowna College</b><br>             Community: Kelowna<br>             Year: 2021<br>             Initiative: High School Mentoring<br>             Students reached: 54<br>             Modality: Hybrid<br>             Notes: Workshop         </div>`)[0];
+            popup_0b7701c43258b3a7db825482ffbfb963.setContent(html_7c7aff602ed300affd2c81e4e9a77690);
+        
+
+        circle_marker_a3cded54fbbf8e336f4a56709b887caf.bindPopup(popup_0b7701c43258b3a7db825482ffbfb963)
+        ;
+
+        
+    
+    
+            var circle_marker_15e1c01ed226929d39ca559f12fc7059 = L.circleMarker(
+                [49.8354, -124.524],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_e10e66049e026d7b3579ec7df241956a = L.popup({"maxWidth": 300});
+
+        
+            var html_db76c018f7ec23b83076fec77c183090 = $(`<div id="html_db76c018f7ec23b83076fec77c183090" style="width: 100.0%; height: 100.0%;">             <b>Powell River High School</b><br>             Community: Powell River<br>             Year: 2021<br>             Initiative: High School Mentoring<br>             Students reached: 27<br>             Modality: Hybrid<br>             Notes: Application tips         </div>`)[0];
+            popup_e10e66049e026d7b3579ec7df241956a.setContent(html_db76c018f7ec23b83076fec77c183090);
+        
+
+        circle_marker_15e1c01ed226929d39ca559f12fc7059.bindPopup(popup_e10e66049e026d7b3579ec7df241956a)
+        ;
+
+        
+    
+    
+            var circle_marker_26ef0f9fdf9d9dfdac74b2425b216d3d = L.circleMarker(
+                [54.315, -130.32],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_d5ae7f6a00db8c6a8b2b714ea0abe1b6 = L.popup({"maxWidth": 300});
+
+        
+            var html_60e607d64d99f71102da89e2a4c2649b = $(`<div id="html_60e607d64d99f71102da89e2a4c2649b" style="width: 100.0%; height: 100.0%;">             <b>Prince Rupert Community School</b><br>             Community: Prince Rupert<br>             Year: 2021<br>             Initiative: High School Mentoring<br>             Students reached: 47<br>             Modality: Virtual<br>             Notes: Application tips         </div>`)[0];
+            popup_d5ae7f6a00db8c6a8b2b714ea0abe1b6.setContent(html_60e607d64d99f71102da89e2a4c2649b);
+        
+
+        circle_marker_26ef0f9fdf9d9dfdac74b2425b216d3d.bindPopup(popup_d5ae7f6a00db8c6a8b2b714ea0abe1b6)
+        ;
+
+        
+    
+    
+            var circle_marker_9513f2039f5cea63b79060fefbf7f102 = L.circleMarker(
+                [52.9784, -122.4927],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_7c4a4ca7e29074d5fb2bc4c11406cc9d = L.popup({"maxWidth": 300});
+
+        
+            var html_59d0745cdf909099c4cfb1ed50fcab77 = $(`<div id="html_59d0745cdf909099c4cfb1ed50fcab77" style="width: 100.0%; height: 100.0%;">             <b>Quesnel Secondary</b><br>             Community: Quesnel<br>             Year: 2021<br>             Initiative: High School Mentoring<br>             Students reached: 119<br>             Modality: In-person<br>             Notes: Application tips         </div>`)[0];
+            popup_7c4a4ca7e29074d5fb2bc4c11406cc9d.setContent(html_59d0745cdf909099c4cfb1ed50fcab77);
+        
+
+        circle_marker_9513f2039f5cea63b79060fefbf7f102.bindPopup(popup_7c4a4ca7e29074d5fb2bc4c11406cc9d)
+        ;
+
+        
+    
+    
+            var circle_marker_3ee56044d260457a9fdb6a8f06be3c92 = L.circleMarker(
+                [50.7026, -119.272],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_9b5fc08328721389067cf82ea01c6b36 = L.popup({"maxWidth": 300});
+
+        
+            var html_d84d81b14f1e236a6c93a7c57b427575 = $(`<div id="html_d84d81b14f1e236a6c93a7c57b427575" style="width: 100.0%; height: 100.0%;">             <b>Salmon Arm Community School</b><br>             Community: Salmon Arm<br>             Year: 2021<br>             Initiative: High School Mentoring<br>             Students reached: 84<br>             Modality: In-person<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_9b5fc08328721389067cf82ea01c6b36.setContent(html_d84d81b14f1e236a6c93a7c57b427575);
+        
+
+        circle_marker_3ee56044d260457a9fdb6a8f06be3c92.bindPopup(popup_9b5fc08328721389067cf82ea01c6b36)
+        ;
+
+        
+    
+    
+            var circle_marker_e6072b221337872cdee54a068ed7547f = L.circleMarker(
+                [49.7016, -123.1558],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_83e2bd250c7f63f44c5b72b196f60b95 = L.popup({"maxWidth": 300});
+
+        
+            var html_a59645af5d37ed14f799f16f7e0d5b78 = $(`<div id="html_a59645af5d37ed14f799f16f7e0d5b78" style="width: 100.0%; height: 100.0%;">             <b>Squamish Learning Centre</b><br>             Community: Squamish<br>             Year: 2021<br>             Initiative: High School Mentoring<br>             Students reached: 49<br>             Modality: In-person<br>             Notes: Career panel         </div>`)[0];
+            popup_83e2bd250c7f63f44c5b72b196f60b95.setContent(html_a59645af5d37ed14f799f16f7e0d5b78);
+        
+
+        circle_marker_e6072b221337872cdee54a068ed7547f.bindPopup(popup_83e2bd250c7f63f44c5b72b196f60b95)
+        ;
+
+        
+    
+    
+            var circle_marker_ccf7a7ce39af7c1b94a2a68271dd10fa = L.circleMarker(
+                [54.5164, -128.6035],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_d2ab95476ff81cd4b07cb52e2ba43bc5 = L.popup({"maxWidth": 300});
+
+        
+            var html_24df2afdfa9e801570a740acf93849bb = $(`<div id="html_24df2afdfa9e801570a740acf93849bb" style="width: 100.0%; height: 100.0%;">             <b>Terrace College</b><br>             Community: Terrace<br>             Year: 2021<br>             Initiative: High School Mentoring<br>             Students reached: 30<br>             Modality: Virtual<br>             Notes: Career panel         </div>`)[0];
+            popup_d2ab95476ff81cd4b07cb52e2ba43bc5.setContent(html_24df2afdfa9e801570a740acf93849bb);
+        
+
+        circle_marker_ccf7a7ce39af7c1b94a2a68271dd10fa.bindPopup(popup_d2ab95476ff81cd4b07cb52e2ba43bc5)
+        ;
+
+        
+    
+    
+            var circle_marker_5c33203f751ad43921ebc3c532bb9978 = L.circleMarker(
+                [49.2827, -123.1207],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_d7618bf9dcd9aedb1a442d904c6ae721 = L.popup({"maxWidth": 300});
+
+        
+            var html_2b002aecb879f69f8865f4cb1be00b2e = $(`<div id="html_2b002aecb879f69f8865f4cb1be00b2e" style="width: 100.0%; height: 100.0%;">             <b>Vancouver Learning Centre</b><br>             Community: Vancouver<br>             Year: 2021<br>             Initiative: High School Mentoring<br>             Students reached: 74<br>             Modality: Hybrid<br>             Notes: Career panel         </div>`)[0];
+            popup_d7618bf9dcd9aedb1a442d904c6ae721.setContent(html_2b002aecb879f69f8865f4cb1be00b2e);
+        
+
+        circle_marker_5c33203f751ad43921ebc3c532bb9978.bindPopup(popup_d7618bf9dcd9aedb1a442d904c6ae721)
+        ;
+
+        
+    
+    
+            var circle_marker_cd83bbb78e19d6a0b117eb806b90fdcd = L.circleMarker(
+                [50.1163, -122.9574],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_673cb6101863975480b5bf15265496d1 = L.popup({"maxWidth": 300});
+
+        
+            var html_5f3b217e8881b923c0263f44ce3321f3 = $(`<div id="html_5f3b217e8881b923c0263f44ce3321f3" style="width: 100.0%; height: 100.0%;">             <b>Whistler High School</b><br>             Community: Whistler<br>             Year: 2021<br>             Initiative: High School Mentoring<br>             Students reached: 56<br>             Modality: Virtual<br>             Notes: Application tips         </div>`)[0];
+            popup_673cb6101863975480b5bf15265496d1.setContent(html_5f3b217e8881b923c0263f44ce3321f3);
+        
+
+        circle_marker_cd83bbb78e19d6a0b117eb806b90fdcd.bindPopup(popup_673cb6101863975480b5bf15265496d1)
+        ;
+
+        
+    
+    
+            var circle_marker_5d0ea36253be643e2b5bf1c5d0830900 = L.circleMarker(
+                [52.1415, -122.1417],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_935e30d72600cfb7d61791f52bce75bb = L.popup({"maxWidth": 300});
+
+        
+            var html_b8a2bfed0906431580353dd9d302fc83 = $(`<div id="html_b8a2bfed0906431580353dd9d302fc83" style="width: 100.0%; height: 100.0%;">             <b>Williams Lake Elem School</b><br>             Community: Williams Lake<br>             Year: 2021<br>             Initiative: High School Mentoring<br>             Students reached: 118<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_935e30d72600cfb7d61791f52bce75bb.setContent(html_b8a2bfed0906431580353dd9d302fc83);
+        
+
+        circle_marker_5d0ea36253be643e2b5bf1c5d0830900.bindPopup(popup_935e30d72600cfb7d61791f52bce75bb)
+        ;
+
+        
+    
+    
+            var feature_group_8be47da89198fe7bd9780f3e9b851d5f = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_c08dc783768c9ce9b3624159b54fa692 = L.circleMarker(
+                [49.6866, -124.9936],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_0d200fd84c5636d9cbf7df0d3be373e6 = L.popup({"maxWidth": 300});
+
+        
+            var html_3d95b1a4be0804c505225056fdebf4d5 = $(`<div id="html_3d95b1a4be0804c505225056fdebf4d5" style="width: 100.0%; height: 100.0%;">             <b>Courtenay College</b><br>             Community: Courtenay<br>             Year: 2021<br>             Initiative: REAP Presentation<br>             Students reached: 35<br>             Modality: Virtual<br>             Notes: Career panel         </div>`)[0];
+            popup_0d200fd84c5636d9cbf7df0d3be373e6.setContent(html_3d95b1a4be0804c505225056fdebf4d5);
+        
+
+        circle_marker_c08dc783768c9ce9b3624159b54fa692.bindPopup(popup_0d200fd84c5636d9cbf7df0d3be373e6)
+        ;
+
+        
+    
+    
+            var circle_marker_e1d2e89cfd19d91f5a4a3aa75fe936fa = L.circleMarker(
+                [49.6866, -124.9936],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_e09af8f76d6524235910208629408017 = L.popup({"maxWidth": 300});
+
+        
+            var html_27f1530c31afd60278de564fbf9ec5a7 = $(`<div id="html_27f1530c31afd60278de564fbf9ec5a7" style="width: 100.0%; height: 100.0%;">             <b>Courtenay College</b><br>             Community: Courtenay<br>             Year: 2021<br>             Initiative: REAP Presentation<br>             Students reached: 148<br>             Modality: In-person<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_e09af8f76d6524235910208629408017.setContent(html_27f1530c31afd60278de564fbf9ec5a7);
+        
+
+        circle_marker_e1d2e89cfd19d91f5a4a3aa75fe936fa.bindPopup(popup_e09af8f76d6524235910208629408017)
+        ;
+
+        
+    
+    
+            var circle_marker_461b4dbdbae6d64e922256384fbe6e08 = L.circleMarker(
+                [50.6745, -120.3273],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_ee29726189a2122d9a593e044e7cc5ee = L.popup({"maxWidth": 300});
+
+        
+            var html_19c390a01e6c786b0b0461550b967ccc = $(`<div id="html_19c390a01e6c786b0b0461550b967ccc" style="width: 100.0%; height: 100.0%;">             <b>Kamloops Learning Centre</b><br>             Community: Kamloops<br>             Year: 2021<br>             Initiative: REAP Presentation<br>             Students reached: 77<br>             Modality: Virtual<br>             Notes: Application tips         </div>`)[0];
+            popup_ee29726189a2122d9a593e044e7cc5ee.setContent(html_19c390a01e6c786b0b0461550b967ccc);
+        
+
+        circle_marker_461b4dbdbae6d64e922256384fbe6e08.bindPopup(popup_ee29726189a2122d9a593e044e7cc5ee)
+        ;
+
+        
+    
+    
+            var circle_marker_145f78364c243e6c217abca3bd6601cb = L.circleMarker(
+                [54.0524, -128.653],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_748c5172347f9bcd03b112f181dca988 = L.popup({"maxWidth": 300});
+
+        
+            var html_5e8d9fb4d78b1ae2c2612836321b3eb9 = $(`<div id="html_5e8d9fb4d78b1ae2c2612836321b3eb9" style="width: 100.0%; height: 100.0%;">             <b>Kitimat Elem School</b><br>             Community: Kitimat<br>             Year: 2021<br>             Initiative: REAP Presentation<br>             Students reached: 64<br>             Modality: Hybrid<br>             Notes: Application tips         </div>`)[0];
+            popup_748c5172347f9bcd03b112f181dca988.setContent(html_5e8d9fb4d78b1ae2c2612836321b3eb9);
+        
+
+        circle_marker_145f78364c243e6c217abca3bd6601cb.bindPopup(popup_748c5172347f9bcd03b112f181dca988)
+        ;
+
+        
+    
+    
+            var circle_marker_11e2fcda7088f0d8917bad9ef58654d4 = L.circleMarker(
+                [50.267, -119.272],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_7d58cd4c525871365f572f45b1b2afb2 = L.popup({"maxWidth": 300});
+
+        
+            var html_b371265bbfe286206233b18582ea4088 = $(`<div id="html_b371265bbfe286206233b18582ea4088" style="width: 100.0%; height: 100.0%;">             <b>Vernon Elem School</b><br>             Community: Vernon<br>             Year: 2021<br>             Initiative: REAP Presentation<br>             Students reached: 95<br>             Modality: Hybrid<br>             Notes: Career panel         </div>`)[0];
+            popup_7d58cd4c525871365f572f45b1b2afb2.setContent(html_b371265bbfe286206233b18582ea4088);
+        
+
+        circle_marker_11e2fcda7088f0d8917bad9ef58654d4.bindPopup(popup_7d58cd4c525871365f572f45b1b2afb2)
+        ;
+
+        
+    
+    
+            var circle_marker_3ada2de7dc275c6e57b5895550e6f938 = L.circleMarker(
+                [48.4284, -123.3656],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_e5c2cab1503ff69b8d5933a1eba98ec8 = L.popup({"maxWidth": 300});
+
+        
+            var html_fedc406f272e65ee8bd81310fa0d5e87 = $(`<div id="html_fedc406f272e65ee8bd81310fa0d5e87" style="width: 100.0%; height: 100.0%;">             <b>Victoria Secondary</b><br>             Community: Victoria<br>             Year: 2021<br>             Initiative: REAP Presentation<br>             Students reached: 64<br>             Modality: Hybrid<br>             Notes: Career panel         </div>`)[0];
+            popup_e5c2cab1503ff69b8d5933a1eba98ec8.setContent(html_fedc406f272e65ee8bd81310fa0d5e87);
+        
+
+        circle_marker_3ada2de7dc275c6e57b5895550e6f938.bindPopup(popup_e5c2cab1503ff69b8d5933a1eba98ec8)
+        ;
+
+        
+    
+    
+            var circle_marker_fda9c638dbcc4120baea3dde4ac99a9a = L.circleMarker(
+                [52.1415, -122.1417],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_ba303716323c15f634caee391f377377 = L.popup({"maxWidth": 300});
+
+        
+            var html_2dc9b4f6b756d9a407e940464f91b8c3 = $(`<div id="html_2dc9b4f6b756d9a407e940464f91b8c3" style="width: 100.0%; height: 100.0%;">             <b>Williams Lake High School</b><br>             Community: Williams Lake<br>             Year: 2021<br>             Initiative: REAP Presentation<br>             Students reached: 125<br>             Modality: In-person<br>             Notes: Application tips         </div>`)[0];
+            popup_ba303716323c15f634caee391f377377.setContent(html_2dc9b4f6b756d9a407e940464f91b8c3);
+        
+
+        circle_marker_fda9c638dbcc4120baea3dde4ac99a9a.bindPopup(popup_ba303716323c15f634caee391f377377)
+        ;
+
+        
+    
+    
+            var feature_group_d0ce82f1b671b2201ce1d21c6c19adab = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_2e6283451a0bd1e75503898bf3f9b18f = L.circleMarker(
+                [49.1579, -121.9515],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_520fa1bae6cd2c121bec059576ffada2 = L.popup({"maxWidth": 300});
+
+        
+            var html_7b88fb8fe9ec60b9da1a5164e8104ae6 = $(`<div id="html_7b88fb8fe9ec60b9da1a5164e8104ae6" style="width: 100.0%; height: 100.0%;">             <b>Chilliwack Community School</b><br>             Community: Chilliwack<br>             Year: 2021<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 40<br>             Modality: Virtual<br>             Notes: Workshop         </div>`)[0];
+            popup_520fa1bae6cd2c121bec059576ffada2.setContent(html_7b88fb8fe9ec60b9da1a5164e8104ae6);
+        
+
+        circle_marker_2e6283451a0bd1e75503898bf3f9b18f.bindPopup(popup_520fa1bae6cd2c121bec059576ffada2)
+        ;
+
+        
+    
+    
+            var circle_marker_5126b4c0b43e9be5164464bf0f9e03c3 = L.circleMarker(
+                [52.9784, -122.4927],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_1610d10f8464793ec998666372353654 = L.popup({"maxWidth": 300});
+
+        
+            var html_41f6c11697db4acaa7d8c3d03c970d0f = $(`<div id="html_41f6c11697db4acaa7d8c3d03c970d0f" style="width: 100.0%; height: 100.0%;">             <b>Quesnel High School</b><br>             Community: Quesnel<br>             Year: 2021<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 15<br>             Modality: In-person<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_1610d10f8464793ec998666372353654.setContent(html_41f6c11697db4acaa7d8c3d03c970d0f);
+        
+
+        circle_marker_5126b4c0b43e9be5164464bf0f9e03c3.bindPopup(popup_1610d10f8464793ec998666372353654)
+        ;
+
+        
+    
+    
+            var circle_marker_f02f972c0e50e1b67ac28265957c0f5c = L.circleMarker(
+                [49.7016, -123.1558],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_c511576191084e3835ac1f36c30582a7 = L.popup({"maxWidth": 300});
+
+        
+            var html_e0559432f50b0663f281f26fc2fff9d6 = $(`<div id="html_e0559432f50b0663f281f26fc2fff9d6" style="width: 100.0%; height: 100.0%;">             <b>Squamish College</b><br>             Community: Squamish<br>             Year: 2021<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 52<br>             Modality: In-person<br>             Notes: Workshop         </div>`)[0];
+            popup_c511576191084e3835ac1f36c30582a7.setContent(html_e0559432f50b0663f281f26fc2fff9d6);
+        
+
+        circle_marker_f02f972c0e50e1b67ac28265957c0f5c.bindPopup(popup_c511576191084e3835ac1f36c30582a7)
+        ;
+
+        
+    
+    
+            var circle_marker_ec06e6939e23855404625c191375cec3 = L.circleMarker(
+                [49.0955, -117.7119],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_848db601a10184a3d642bc3f813e0fd4 = L.popup({"maxWidth": 300});
+
+        
+            var html_84b2213eff681d4869b964855b7ebd4f = $(`<div id="html_84b2213eff681d4869b964855b7ebd4f" style="width: 100.0%; height: 100.0%;">             <b>Trail Elem School</b><br>             Community: Trail<br>             Year: 2021<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 20<br>             Modality: Hybrid<br>             Notes: Application tips         </div>`)[0];
+            popup_848db601a10184a3d642bc3f813e0fd4.setContent(html_84b2213eff681d4869b964855b7ebd4f);
+        
+
+        circle_marker_ec06e6939e23855404625c191375cec3.bindPopup(popup_848db601a10184a3d642bc3f813e0fd4)
+        ;
+
+        
+    
+    
+            var circle_marker_b9d1a744ba7b7c6a4c98d759b67a0ffc = L.circleMarker(
+                [50.267, -119.272],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_65e6ca7b048da4424bdc9078bc0090e7 = L.popup({"maxWidth": 300});
+
+        
+            var html_d8a64ba141d63edcb27dd73eb6078e6b = $(`<div id="html_d8a64ba141d63edcb27dd73eb6078e6b" style="width: 100.0%; height: 100.0%;">             <b>Vernon Learning Centre</b><br>             Community: Vernon<br>             Year: 2021<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 95<br>             Modality: In-person<br>             Notes: Career panel         </div>`)[0];
+            popup_65e6ca7b048da4424bdc9078bc0090e7.setContent(html_d8a64ba141d63edcb27dd73eb6078e6b);
+        
+
+        circle_marker_b9d1a744ba7b7c6a4c98d759b67a0ffc.bindPopup(popup_65e6ca7b048da4424bdc9078bc0090e7)
+        ;
+
+        
+    
+    
+            var circle_marker_52a1a607be362fc759dd4a9d5211bdbe = L.circleMarker(
+                [50.1163, -122.9574],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+        var popup_976ff996b7ce2b54a2fa4b88f976ea86 = L.popup({"maxWidth": 300});
+
+        
+            var html_5073bb8875b4958511ca04f400ceec76 = $(`<div id="html_5073bb8875b4958511ca04f400ceec76" style="width: 100.0%; height: 100.0%;">             <b>Whistler Elem School</b><br>             Community: Whistler<br>             Year: 2021<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 93<br>             Modality: Virtual<br>             Notes: Workshop         </div>`)[0];
+            popup_976ff996b7ce2b54a2fa4b88f976ea86.setContent(html_5073bb8875b4958511ca04f400ceec76);
+        
+
+        circle_marker_52a1a607be362fc759dd4a9d5211bdbe.bindPopup(popup_976ff996b7ce2b54a2fa4b88f976ea86)
+        ;
+
+        
+    
+    
+            var feature_group_261fd360912a67bd8a5f53023c6a686e = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_bc8b6016d0c802feada10879536dd6f7 = L.circleMarker(
+                [49.1579, -121.9515],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_0b1867c0a6c2754df5f64afb987daeaf = L.popup({"maxWidth": 300});
+
+        
+            var html_f210e43bb896dcb1e71238b3ad72eba4 = $(`<div id="html_f210e43bb896dcb1e71238b3ad72eba4" style="width: 100.0%; height: 100.0%;">             <b>Chilliwack College</b><br>             Community: Chilliwack<br>             Year: 2022<br>             Initiative: High School Mentoring<br>             Students reached: 77<br>             Modality: In-person<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_0b1867c0a6c2754df5f64afb987daeaf.setContent(html_f210e43bb896dcb1e71238b3ad72eba4);
+        
+
+        circle_marker_bc8b6016d0c802feada10879536dd6f7.bindPopup(popup_0b1867c0a6c2754df5f64afb987daeaf)
+        ;
+
+        
+    
+    
+            var circle_marker_033d5e345ed80869b701578f76cb9be0 = L.circleMarker(
+                [54.0524, -128.653],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_b9b312ad9375169cfe0ba42cdb74b5ae = L.popup({"maxWidth": 300});
+
+        
+            var html_744b6d667d0a2780d897013540fc8d45 = $(`<div id="html_744b6d667d0a2780d897013540fc8d45" style="width: 100.0%; height: 100.0%;">             <b>Kitimat Community School</b><br>             Community: Kitimat<br>             Year: 2022<br>             Initiative: High School Mentoring<br>             Students reached: 21<br>             Modality: Virtual<br>             Notes: Workshop         </div>`)[0];
+            popup_b9b312ad9375169cfe0ba42cdb74b5ae.setContent(html_744b6d667d0a2780d897013540fc8d45);
+        
+
+        circle_marker_033d5e345ed80869b701578f76cb9be0.bindPopup(popup_b9b312ad9375169cfe0ba42cdb74b5ae)
+        ;
+
+        
+    
+    
+            var circle_marker_b8db3445e7fbafeb8924d705dfeac94f = L.circleMarker(
+                [49.1659, -123.9401],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_d3e955563f2d57e742cf4030b6a73f8a = L.popup({"maxWidth": 300});
+
+        
+            var html_e4adfa3d7e4cb3b01219ac33db03517d = $(`<div id="html_e4adfa3d7e4cb3b01219ac33db03517d" style="width: 100.0%; height: 100.0%;">             <b>Nanaimo Learning Centre</b><br>             Community: Nanaimo<br>             Year: 2022<br>             Initiative: High School Mentoring<br>             Students reached: 110<br>             Modality: Virtual<br>             Notes: Career panel         </div>`)[0];
+            popup_d3e955563f2d57e742cf4030b6a73f8a.setContent(html_e4adfa3d7e4cb3b01219ac33db03517d);
+        
+
+        circle_marker_b8db3445e7fbafeb8924d705dfeac94f.bindPopup(popup_d3e955563f2d57e742cf4030b6a73f8a)
+        ;
+
+        
+    
+    
+            var circle_marker_dcf1d7393a1a94d1fec75d8af53606fa = L.circleMarker(
+                [54.315, -130.32],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_ec60cde028e9fada210731849257c458 = L.popup({"maxWidth": 300});
+
+        
+            var html_2df45197ba130976b677f1a208fb3abf = $(`<div id="html_2df45197ba130976b677f1a208fb3abf" style="width: 100.0%; height: 100.0%;">             <b>Prince Rupert Community School</b><br>             Community: Prince Rupert<br>             Year: 2022<br>             Initiative: High School Mentoring<br>             Students reached: 35<br>             Modality: Virtual<br>             Notes: Application tips         </div>`)[0];
+            popup_ec60cde028e9fada210731849257c458.setContent(html_2df45197ba130976b677f1a208fb3abf);
+        
+
+        circle_marker_dcf1d7393a1a94d1fec75d8af53606fa.bindPopup(popup_ec60cde028e9fada210731849257c458)
+        ;
+
+        
+    
+    
+            var circle_marker_697670c421021d1321f7171e4de62f64 = L.circleMarker(
+                [49.7016, -123.1558],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_5c8ee8a438df800c391a0ddcf3de7f9c = L.popup({"maxWidth": 300});
+
+        
+            var html_10f081ccfeaa9e786e1ff1d48f256ae3 = $(`<div id="html_10f081ccfeaa9e786e1ff1d48f256ae3" style="width: 100.0%; height: 100.0%;">             <b>Squamish High School</b><br>             Community: Squamish<br>             Year: 2022<br>             Initiative: High School Mentoring<br>             Students reached: 82<br>             Modality: Virtual<br>             Notes: Application tips         </div>`)[0];
+            popup_5c8ee8a438df800c391a0ddcf3de7f9c.setContent(html_10f081ccfeaa9e786e1ff1d48f256ae3);
+        
+
+        circle_marker_697670c421021d1321f7171e4de62f64.bindPopup(popup_5c8ee8a438df800c391a0ddcf3de7f9c)
+        ;
+
+        
+    
+    
+            var circle_marker_f3078ea61b5b2d9132fda8cc9d4007f1 = L.circleMarker(
+                [54.5164, -128.6035],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_4325abddd8fd223dbdea629cc556cdac = L.popup({"maxWidth": 300});
+
+        
+            var html_00d296dd5dee9386955442d34b904b17 = $(`<div id="html_00d296dd5dee9386955442d34b904b17" style="width: 100.0%; height: 100.0%;">             <b>Terrace Secondary</b><br>             Community: Terrace<br>             Year: 2022<br>             Initiative: High School Mentoring<br>             Students reached: 101<br>             Modality: Virtual<br>             Notes: Workshop         </div>`)[0];
+            popup_4325abddd8fd223dbdea629cc556cdac.setContent(html_00d296dd5dee9386955442d34b904b17);
+        
+
+        circle_marker_f3078ea61b5b2d9132fda8cc9d4007f1.bindPopup(popup_4325abddd8fd223dbdea629cc556cdac)
+        ;
+
+        
+    
+    
+            var circle_marker_cd4d2334bbd21eb884238a26f499d4ba = L.circleMarker(
+                [48.4284, -123.3656],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_8b79e095b14b856a6265c06e544fe5a1 = L.popup({"maxWidth": 300});
+
+        
+            var html_e0289a5fa7ce41ff7381e68d6848ad57 = $(`<div id="html_e0289a5fa7ce41ff7381e68d6848ad57" style="width: 100.0%; height: 100.0%;">             <b>Victoria Secondary</b><br>             Community: Victoria<br>             Year: 2022<br>             Initiative: High School Mentoring<br>             Students reached: 73<br>             Modality: In-person<br>             Notes: Career panel         </div>`)[0];
+            popup_8b79e095b14b856a6265c06e544fe5a1.setContent(html_e0289a5fa7ce41ff7381e68d6848ad57);
+        
+
+        circle_marker_cd4d2334bbd21eb884238a26f499d4ba.bindPopup(popup_8b79e095b14b856a6265c06e544fe5a1)
+        ;
+
+        
+    
+    
+            var feature_group_fde6a766f8dcc65fbf6d7acaa1ee8afe = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_3559a623a79e95679bbf9fa785809183 = L.circleMarker(
+                [55.7606, -120.235],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_35defc3e80b73a542b044fcbb6cd8474 = L.popup({"maxWidth": 300});
+
+        
+            var html_5cc7efe301d3675e48f998871fd781e8 = $(`<div id="html_5cc7efe301d3675e48f998871fd781e8" style="width: 100.0%; height: 100.0%;">             <b>Dawson Creek Community School</b><br>             Community: Dawson Creek<br>             Year: 2022<br>             Initiative: REAP Presentation<br>             Students reached: 59<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_35defc3e80b73a542b044fcbb6cd8474.setContent(html_5cc7efe301d3675e48f998871fd781e8);
+        
+
+        circle_marker_3559a623a79e95679bbf9fa785809183.bindPopup(popup_35defc3e80b73a542b044fcbb6cd8474)
+        ;
+
+        
+    
+    
+            var circle_marker_79ea7509ebdaf6c1f2b83e73969e3380 = L.circleMarker(
+                [55.7606, -120.235],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_fc8de8adb8bc984c59a4b9cb4fdbdf74 = L.popup({"maxWidth": 300});
+
+        
+            var html_2fafeb6b45bd06de6bd1753ed9665682 = $(`<div id="html_2fafeb6b45bd06de6bd1753ed9665682" style="width: 100.0%; height: 100.0%;">             <b>Dawson Creek Elem School</b><br>             Community: Dawson Creek<br>             Year: 2022<br>             Initiative: REAP Presentation<br>             Students reached: 136<br>             Modality: Hybrid<br>             Notes: Workshop         </div>`)[0];
+            popup_fc8de8adb8bc984c59a4b9cb4fdbdf74.setContent(html_2fafeb6b45bd06de6bd1753ed9665682);
+        
+
+        circle_marker_79ea7509ebdaf6c1f2b83e73969e3380.bindPopup(popup_fc8de8adb8bc984c59a4b9cb4fdbdf74)
+        ;
+
+        
+    
+    
+            var circle_marker_30418a85954be94fb73d4b45382f02ca = L.circleMarker(
+                [50.6745, -120.3273],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_94ce65286fd098d304fc65e0c0eaffe5 = L.popup({"maxWidth": 300});
+
+        
+            var html_38fe944deeab13e9364889c8db0d6498 = $(`<div id="html_38fe944deeab13e9364889c8db0d6498" style="width: 100.0%; height: 100.0%;">             <b>Kamloops High School</b><br>             Community: Kamloops<br>             Year: 2022<br>             Initiative: REAP Presentation<br>             Students reached: 82<br>             Modality: Hybrid<br>             Notes: Application tips         </div>`)[0];
+            popup_94ce65286fd098d304fc65e0c0eaffe5.setContent(html_38fe944deeab13e9364889c8db0d6498);
+        
+
+        circle_marker_30418a85954be94fb73d4b45382f02ca.bindPopup(popup_94ce65286fd098d304fc65e0c0eaffe5)
+        ;
+
+        
+    
+    
+            var circle_marker_f58bdbdc9924c66ba31c4ab2114c6995 = L.circleMarker(
+                [54.0524, -128.653],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_95972f52e32a2194cbc7ca645c081619 = L.popup({"maxWidth": 300});
+
+        
+            var html_bc1188f824019db020ed2550f1380273 = $(`<div id="html_bc1188f824019db020ed2550f1380273" style="width: 100.0%; height: 100.0%;">             <b>Kitimat Elem School</b><br>             Community: Kitimat<br>             Year: 2022<br>             Initiative: REAP Presentation<br>             Students reached: 16<br>             Modality: Virtual<br>             Notes: Application tips         </div>`)[0];
+            popup_95972f52e32a2194cbc7ca645c081619.setContent(html_bc1188f824019db020ed2550f1380273);
+        
+
+        circle_marker_f58bdbdc9924c66ba31c4ab2114c6995.bindPopup(popup_95972f52e32a2194cbc7ca645c081619)
+        ;
+
+        
+    
+    
+            var circle_marker_5f47c6dfbea58def718619043543bfe3 = L.circleMarker(
+                [49.8354, -124.524],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_7d9a651461cccee0b6757af342f19945 = L.popup({"maxWidth": 300});
+
+        
+            var html_46f4ac1d21c0c2eb189ee6e467c3580d = $(`<div id="html_46f4ac1d21c0c2eb189ee6e467c3580d" style="width: 100.0%; height: 100.0%;">             <b>Powell River High School</b><br>             Community: Powell River<br>             Year: 2022<br>             Initiative: REAP Presentation<br>             Students reached: 30<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_7d9a651461cccee0b6757af342f19945.setContent(html_46f4ac1d21c0c2eb189ee6e467c3580d);
+        
+
+        circle_marker_5f47c6dfbea58def718619043543bfe3.bindPopup(popup_7d9a651461cccee0b6757af342f19945)
+        ;
+
+        
+    
+    
+            var circle_marker_26c7b8b37420d8f0bfda022be5c33c3a = L.circleMarker(
+                [50.267, -119.272],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_43057aa497bfc08e776ef7e163e45e6a = L.popup({"maxWidth": 300});
+
+        
+            var html_0ecc7a1c6cb2aecdf6436bd632fea8d6 = $(`<div id="html_0ecc7a1c6cb2aecdf6436bd632fea8d6" style="width: 100.0%; height: 100.0%;">             <b>Vernon Elem School</b><br>             Community: Vernon<br>             Year: 2022<br>             Initiative: REAP Presentation<br>             Students reached: 126<br>             Modality: Virtual<br>             Notes: Workshop         </div>`)[0];
+            popup_43057aa497bfc08e776ef7e163e45e6a.setContent(html_0ecc7a1c6cb2aecdf6436bd632fea8d6);
+        
+
+        circle_marker_26c7b8b37420d8f0bfda022be5c33c3a.bindPopup(popup_43057aa497bfc08e776ef7e163e45e6a)
+        ;
+
+        
+    
+    
+            var circle_marker_66be9612947ece7ea6fb729f73856116 = L.circleMarker(
+                [50.1163, -122.9574],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_598badc5352e9f46ee42a6b699186d6c = L.popup({"maxWidth": 300});
+
+        
+            var html_81872957c6af0a0b134b1af43530c317 = $(`<div id="html_81872957c6af0a0b134b1af43530c317" style="width: 100.0%; height: 100.0%;">             <b>Whistler Elem School</b><br>             Community: Whistler<br>             Year: 2022<br>             Initiative: REAP Presentation<br>             Students reached: 42<br>             Modality: In-person<br>             Notes: Career panel         </div>`)[0];
+            popup_598badc5352e9f46ee42a6b699186d6c.setContent(html_81872957c6af0a0b134b1af43530c317);
+        
+
+        circle_marker_66be9612947ece7ea6fb729f73856116.bindPopup(popup_598badc5352e9f46ee42a6b699186d6c)
+        ;
+
+        
+    
+    
+            var circle_marker_3aa753751840ea3635afefd4a3ce7ee9 = L.circleMarker(
+                [50.1163, -122.9574],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_9bab644f981d821687c8e53aa4985cc8 = L.popup({"maxWidth": 300});
+
+        
+            var html_c392e325a66c6261f69e900d689c478e = $(`<div id="html_c392e325a66c6261f69e900d689c478e" style="width: 100.0%; height: 100.0%;">             <b>Whistler High School</b><br>             Community: Whistler<br>             Year: 2022<br>             Initiative: REAP Presentation<br>             Students reached: 119<br>             Modality: Hybrid<br>             Notes: Workshop         </div>`)[0];
+            popup_9bab644f981d821687c8e53aa4985cc8.setContent(html_c392e325a66c6261f69e900d689c478e);
+        
+
+        circle_marker_3aa753751840ea3635afefd4a3ce7ee9.bindPopup(popup_9bab644f981d821687c8e53aa4985cc8)
+        ;
+
+        
+    
+    
+            var feature_group_a9886f89ae03fac3eaa2386e5ab2b166 = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_ed649f47e1ebb3149837db8a680bb094 = L.circleMarker(
+                [49.6866, -124.9936],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_485fc10d551c1225ce54a3e9221c468b = L.popup({"maxWidth": 300});
+
+        
+            var html_d45e451ebf412753190b76bbb959a0af = $(`<div id="html_d45e451ebf412753190b76bbb959a0af" style="width: 100.0%; height: 100.0%;">             <b>Courtenay College</b><br>             Community: Courtenay<br>             Year: 2022<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 45<br>             Modality: Hybrid<br>             Notes: Workshop         </div>`)[0];
+            popup_485fc10d551c1225ce54a3e9221c468b.setContent(html_d45e451ebf412753190b76bbb959a0af);
+        
+
+        circle_marker_ed649f47e1ebb3149837db8a680bb094.bindPopup(popup_485fc10d551c1225ce54a3e9221c468b)
+        ;
+
+        
+    
+    
+            var circle_marker_60a2fada4d5c056379c40421ff43133f = L.circleMarker(
+                [49.6866, -124.9936],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_20f4926e6ff8b72a4fbeafd154f1235f = L.popup({"maxWidth": 300});
+
+        
+            var html_41512350ef97b647280d272ec530bc21 = $(`<div id="html_41512350ef97b647280d272ec530bc21" style="width: 100.0%; height: 100.0%;">             <b>Courtenay College</b><br>             Community: Courtenay<br>             Year: 2022<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 48<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_20f4926e6ff8b72a4fbeafd154f1235f.setContent(html_41512350ef97b647280d272ec530bc21);
+        
+
+        circle_marker_60a2fada4d5c056379c40421ff43133f.bindPopup(popup_20f4926e6ff8b72a4fbeafd154f1235f)
+        ;
+
+        
+    
+    
+            var circle_marker_1506d145ed8a2dd52ed0af6938c89adb = L.circleMarker(
+                [50.6745, -120.3273],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_017ca885c6fd1f94942c3d416cd9f1c2 = L.popup({"maxWidth": 300});
+
+        
+            var html_1d19b054522fae38617d2e0ea7211a45 = $(`<div id="html_1d19b054522fae38617d2e0ea7211a45" style="width: 100.0%; height: 100.0%;">             <b>Kamloops Learning Centre</b><br>             Community: Kamloops<br>             Year: 2022<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 84<br>             Modality: Hybrid<br>             Notes: Workshop         </div>`)[0];
+            popup_017ca885c6fd1f94942c3d416cd9f1c2.setContent(html_1d19b054522fae38617d2e0ea7211a45);
+        
+
+        circle_marker_1506d145ed8a2dd52ed0af6938c89adb.bindPopup(popup_017ca885c6fd1f94942c3d416cd9f1c2)
+        ;
+
+        
+    
+    
+            var circle_marker_7e02a15f0a9f6b87cde1de815a78972c = L.circleMarker(
+                [52.9784, -122.4927],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_4317302f0b0d15571e4cbc30cf713513 = L.popup({"maxWidth": 300});
+
+        
+            var html_966ecdadda242be44a6356db96adc39b = $(`<div id="html_966ecdadda242be44a6356db96adc39b" style="width: 100.0%; height: 100.0%;">             <b>Quesnel High School</b><br>             Community: Quesnel<br>             Year: 2022<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 88<br>             Modality: In-person<br>             Notes: Application tips         </div>`)[0];
+            popup_4317302f0b0d15571e4cbc30cf713513.setContent(html_966ecdadda242be44a6356db96adc39b);
+        
+
+        circle_marker_7e02a15f0a9f6b87cde1de815a78972c.bindPopup(popup_4317302f0b0d15571e4cbc30cf713513)
+        ;
+
+        
+    
+    
+            var circle_marker_5ca82931789b1e4f46c860e337713bcf = L.circleMarker(
+                [50.9971, -118.1957],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_b12a5a622891331d1bf5efaba3664689 = L.popup({"maxWidth": 300});
+
+        
+            var html_0f1441d208764d3560077a5695d5dec8 = $(`<div id="html_0f1441d208764d3560077a5695d5dec8" style="width: 100.0%; height: 100.0%;">             <b>Revelstoke Elem School</b><br>             Community: Revelstoke<br>             Year: 2022<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 21<br>             Modality: Virtual<br>             Notes: Application tips         </div>`)[0];
+            popup_b12a5a622891331d1bf5efaba3664689.setContent(html_0f1441d208764d3560077a5695d5dec8);
+        
+
+        circle_marker_5ca82931789b1e4f46c860e337713bcf.bindPopup(popup_b12a5a622891331d1bf5efaba3664689)
+        ;
+
+        
+    
+    
+            var circle_marker_c2e795f57dc77e8facbfd9add69fc1c9 = L.circleMarker(
+                [49.0955, -117.7119],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+        var popup_ae18044e71e528570b0843a000de8701 = L.popup({"maxWidth": 300});
+
+        
+            var html_dd6d40ab429ddba9dcb39a2b934dfccd = $(`<div id="html_dd6d40ab429ddba9dcb39a2b934dfccd" style="width: 100.0%; height: 100.0%;">             <b>Trail Elem School</b><br>             Community: Trail<br>             Year: 2022<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 119<br>             Modality: In-person<br>             Notes: Application tips         </div>`)[0];
+            popup_ae18044e71e528570b0843a000de8701.setContent(html_dd6d40ab429ddba9dcb39a2b934dfccd);
+        
+
+        circle_marker_c2e795f57dc77e8facbfd9add69fc1c9.bindPopup(popup_ae18044e71e528570b0843a000de8701)
+        ;
+
+        
+    
+    
+            var feature_group_2b875c10a31257073770eae9ff8aa71a = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_58f5041b01f8e373703f19b6d95c24c1 = L.circleMarker(
+                [49.1579, -121.9515],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_c4defa6917937a6f719dc4cd968fb189 = L.popup({"maxWidth": 300});
+
+        
+            var html_24a9a81c3661bc58e8348b5f041afc3a = $(`<div id="html_24a9a81c3661bc58e8348b5f041afc3a" style="width: 100.0%; height: 100.0%;">             <b>Chilliwack College</b><br>             Community: Chilliwack<br>             Year: 2023<br>             Initiative: High School Mentoring<br>             Students reached: 127<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_c4defa6917937a6f719dc4cd968fb189.setContent(html_24a9a81c3661bc58e8348b5f041afc3a);
+        
+
+        circle_marker_58f5041b01f8e373703f19b6d95c24c1.bindPopup(popup_c4defa6917937a6f719dc4cd968fb189)
+        ;
+
+        
+    
+    
+            var circle_marker_9e8f8a3fd9ab5f1c6c83319750e70298 = L.circleMarker(
+                [50.6745, -120.3273],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_459276dafd43dd1ffd3cb2de0cd1ae6c = L.popup({"maxWidth": 300});
+
+        
+            var html_261e20dff0a6de9ffcb0f4da3a6faf33 = $(`<div id="html_261e20dff0a6de9ffcb0f4da3a6faf33" style="width: 100.0%; height: 100.0%;">             <b>Kamloops Secondary</b><br>             Community: Kamloops<br>             Year: 2023<br>             Initiative: High School Mentoring<br>             Students reached: 142<br>             Modality: In-person<br>             Notes: Application tips         </div>`)[0];
+            popup_459276dafd43dd1ffd3cb2de0cd1ae6c.setContent(html_261e20dff0a6de9ffcb0f4da3a6faf33);
+        
+
+        circle_marker_9e8f8a3fd9ab5f1c6c83319750e70298.bindPopup(popup_459276dafd43dd1ffd3cb2de0cd1ae6c)
+        ;
+
+        
+    
+    
+            var circle_marker_c609772d7ea12729ac8ff46754286731 = L.circleMarker(
+                [49.1659, -123.9401],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_25656a465a9cfc183207a2575b2df9f2 = L.popup({"maxWidth": 300});
+
+        
+            var html_a41b8b78e4dd424d06268fd4b67a032c = $(`<div id="html_a41b8b78e4dd424d06268fd4b67a032c" style="width: 100.0%; height: 100.0%;">             <b>Nanaimo Learning Centre</b><br>             Community: Nanaimo<br>             Year: 2023<br>             Initiative: High School Mentoring<br>             Students reached: 91<br>             Modality: Hybrid<br>             Notes: Workshop         </div>`)[0];
+            popup_25656a465a9cfc183207a2575b2df9f2.setContent(html_a41b8b78e4dd424d06268fd4b67a032c);
+        
+
+        circle_marker_c609772d7ea12729ac8ff46754286731.bindPopup(popup_25656a465a9cfc183207a2575b2df9f2)
+        ;
+
+        
+    
+    
+            var circle_marker_3bcf56ccaf747ac89a507fe9321226a0 = L.circleMarker(
+                [49.7016, -123.1558],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_1cb3eb37aedb9c4804478dfbab4f5464 = L.popup({"maxWidth": 300});
+
+        
+            var html_ebc708059f6831b302870358fa969b0d = $(`<div id="html_ebc708059f6831b302870358fa969b0d" style="width: 100.0%; height: 100.0%;">             <b>Squamish High School</b><br>             Community: Squamish<br>             Year: 2023<br>             Initiative: High School Mentoring<br>             Students reached: 38<br>             Modality: Hybrid<br>             Notes: Application tips         </div>`)[0];
+            popup_1cb3eb37aedb9c4804478dfbab4f5464.setContent(html_ebc708059f6831b302870358fa969b0d);
+        
+
+        circle_marker_3bcf56ccaf747ac89a507fe9321226a0.bindPopup(popup_1cb3eb37aedb9c4804478dfbab4f5464)
+        ;
+
+        
+    
+    
+            var circle_marker_43254ee81b6ff8427e457061ffa4d1c3 = L.circleMarker(
+                [49.7016, -123.1558],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_d8829175a7c00ac1374b014637ed8998 = L.popup({"maxWidth": 300});
+
+        
+            var html_86c93c96c9d390e8db557ae9f59d5c6d = $(`<div id="html_86c93c96c9d390e8db557ae9f59d5c6d" style="width: 100.0%; height: 100.0%;">             <b>Squamish Learning Centre</b><br>             Community: Squamish<br>             Year: 2023<br>             Initiative: High School Mentoring<br>             Students reached: 54<br>             Modality: In-person<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_d8829175a7c00ac1374b014637ed8998.setContent(html_86c93c96c9d390e8db557ae9f59d5c6d);
+        
+
+        circle_marker_43254ee81b6ff8427e457061ffa4d1c3.bindPopup(popup_d8829175a7c00ac1374b014637ed8998)
+        ;
+
+        
+    
+    
+            var circle_marker_be7bb00c64cd9122c34c6ca78dcdeaf9 = L.circleMarker(
+                [49.2827, -123.1207],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_2be9efe6be8043b6152462001e7a9abd = L.popup({"maxWidth": 300});
+
+        
+            var html_db5fadb2acb4ed326b6d417db5569ef4 = $(`<div id="html_db5fadb2acb4ed326b6d417db5569ef4" style="width: 100.0%; height: 100.0%;">             <b>Vancouver Secondary</b><br>             Community: Vancouver<br>             Year: 2023<br>             Initiative: High School Mentoring<br>             Students reached: 72<br>             Modality: Virtual<br>             Notes: Career panel         </div>`)[0];
+            popup_2be9efe6be8043b6152462001e7a9abd.setContent(html_db5fadb2acb4ed326b6d417db5569ef4);
+        
+
+        circle_marker_be7bb00c64cd9122c34c6ca78dcdeaf9.bindPopup(popup_2be9efe6be8043b6152462001e7a9abd)
+        ;
+
+        
+    
+    
+            var circle_marker_603682a16196c0371e5ebd0263ddcd44 = L.circleMarker(
+                [50.267, -119.272],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_b9639e6bc1a97f1a0302e0829cd20b8a = L.popup({"maxWidth": 300});
+
+        
+            var html_c12cae0ac31749e4360593d510e2d063 = $(`<div id="html_c12cae0ac31749e4360593d510e2d063" style="width: 100.0%; height: 100.0%;">             <b>Vernon Learning Centre</b><br>             Community: Vernon<br>             Year: 2023<br>             Initiative: High School Mentoring<br>             Students reached: 42<br>             Modality: Hybrid<br>             Notes: Application tips         </div>`)[0];
+            popup_b9639e6bc1a97f1a0302e0829cd20b8a.setContent(html_c12cae0ac31749e4360593d510e2d063);
+        
+
+        circle_marker_603682a16196c0371e5ebd0263ddcd44.bindPopup(popup_b9639e6bc1a97f1a0302e0829cd20b8a)
+        ;
+
+        
+    
+    
+            var feature_group_1effce30564dc7bfef7f82bbd488c2d2 = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_f00524692db38e81db355864ac9f0973 = L.circleMarker(
+                [55.7606, -120.235],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_939c925f31c3e37ac0877a97aef50a25 = L.popup({"maxWidth": 300});
+
+        
+            var html_68999f0b197d1240dbd9a463c85a3eb0 = $(`<div id="html_68999f0b197d1240dbd9a463c85a3eb0" style="width: 100.0%; height: 100.0%;">             <b>Dawson Creek Learning Centre</b><br>             Community: Dawson Creek<br>             Year: 2023<br>             Initiative: REAP Presentation<br>             Students reached: 100<br>             Modality: Virtual<br>             Notes: Workshop         </div>`)[0];
+            popup_939c925f31c3e37ac0877a97aef50a25.setContent(html_68999f0b197d1240dbd9a463c85a3eb0);
+        
+
+        circle_marker_f00524692db38e81db355864ac9f0973.bindPopup(popup_939c925f31c3e37ac0877a97aef50a25)
+        ;
+
+        
+    
+    
+            var circle_marker_d1b8a582bf703ab0aaceed5f457e288a = L.circleMarker(
+                [50.6745, -120.3273],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_a8ce1c5119d261c00d7389698ace2cff = L.popup({"maxWidth": 300});
+
+        
+            var html_89a85f03857a118de3d051bb8bc23cee = $(`<div id="html_89a85f03857a118de3d051bb8bc23cee" style="width: 100.0%; height: 100.0%;">             <b>Kamloops Learning Centre</b><br>             Community: Kamloops<br>             Year: 2023<br>             Initiative: REAP Presentation<br>             Students reached: 98<br>             Modality: Virtual<br>             Notes: Workshop         </div>`)[0];
+            popup_a8ce1c5119d261c00d7389698ace2cff.setContent(html_89a85f03857a118de3d051bb8bc23cee);
+        
+
+        circle_marker_d1b8a582bf703ab0aaceed5f457e288a.bindPopup(popup_a8ce1c5119d261c00d7389698ace2cff)
+        ;
+
+        
+    
+    
+            var circle_marker_5f5969ea5e2640af058d30c675154549 = L.circleMarker(
+                [49.1659, -123.9401],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_ae4381c2280dbc0544b7fcc21d4f33ce = L.popup({"maxWidth": 300});
+
+        
+            var html_fac07b58c6074fc83c3fba508a74434e = $(`<div id="html_fac07b58c6074fc83c3fba508a74434e" style="width: 100.0%; height: 100.0%;">             <b>Nanaimo Elem School</b><br>             Community: Nanaimo<br>             Year: 2023<br>             Initiative: REAP Presentation<br>             Students reached: 102<br>             Modality: Virtual<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_ae4381c2280dbc0544b7fcc21d4f33ce.setContent(html_fac07b58c6074fc83c3fba508a74434e);
+        
+
+        circle_marker_5f5969ea5e2640af058d30c675154549.bindPopup(popup_ae4381c2280dbc0544b7fcc21d4f33ce)
+        ;
+
+        
+    
+    
+            var circle_marker_84ca71dc8b9d97212c6fbd735074c16c = L.circleMarker(
+                [53.9171, -122.7497],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_8d182b9fda4dcbf25a1a1edc5577cee5 = L.popup({"maxWidth": 300});
+
+        
+            var html_f3f2e7c3b6c612740ae0a70f04e3e8d7 = $(`<div id="html_f3f2e7c3b6c612740ae0a70f04e3e8d7" style="width: 100.0%; height: 100.0%;">             <b>Prince George Secondary</b><br>             Community: Prince George<br>             Year: 2023<br>             Initiative: REAP Presentation<br>             Students reached: 108<br>             Modality: Virtual<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_8d182b9fda4dcbf25a1a1edc5577cee5.setContent(html_f3f2e7c3b6c612740ae0a70f04e3e8d7);
+        
+
+        circle_marker_84ca71dc8b9d97212c6fbd735074c16c.bindPopup(popup_8d182b9fda4dcbf25a1a1edc5577cee5)
+        ;
+
+        
+    
+    
+            var circle_marker_b05d4dabd4b5c4de3dde679200bb9ec7 = L.circleMarker(
+                [50.7026, -119.272],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_c815b61c53fccf7e9f18f9edbf220a69 = L.popup({"maxWidth": 300});
+
+        
+            var html_3df3d93b673a33ac3420f5a67b992382 = $(`<div id="html_3df3d93b673a33ac3420f5a67b992382" style="width: 100.0%; height: 100.0%;">             <b>Salmon Arm College</b><br>             Community: Salmon Arm<br>             Year: 2023<br>             Initiative: REAP Presentation<br>             Students reached: 139<br>             Modality: Hybrid<br>             Notes: Workshop         </div>`)[0];
+            popup_c815b61c53fccf7e9f18f9edbf220a69.setContent(html_3df3d93b673a33ac3420f5a67b992382);
+        
+
+        circle_marker_b05d4dabd4b5c4de3dde679200bb9ec7.bindPopup(popup_c815b61c53fccf7e9f18f9edbf220a69)
+        ;
+
+        
+    
+    
+            var circle_marker_42483594648009b1bfd9f693fc49efd5 = L.circleMarker(
+                [50.7026, -119.272],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_a6a735e60a237eb4051b70ad98bc54c6 = L.popup({"maxWidth": 300});
+
+        
+            var html_479e27179ade4444ecee5c4b2b45da85 = $(`<div id="html_479e27179ade4444ecee5c4b2b45da85" style="width: 100.0%; height: 100.0%;">             <b>Salmon Arm Community School</b><br>             Community: Salmon Arm<br>             Year: 2023<br>             Initiative: REAP Presentation<br>             Students reached: 35<br>             Modality: Virtual<br>             Notes: Workshop         </div>`)[0];
+            popup_a6a735e60a237eb4051b70ad98bc54c6.setContent(html_479e27179ade4444ecee5c4b2b45da85);
+        
+
+        circle_marker_42483594648009b1bfd9f693fc49efd5.bindPopup(popup_a6a735e60a237eb4051b70ad98bc54c6)
+        ;
+
+        
+    
+    
+            var circle_marker_7614de97b0891be154b67ede47792100 = L.circleMarker(
+                [49.2827, -123.1207],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_732949201a99c65454f9889ecef72237 = L.popup({"maxWidth": 300});
+
+        
+            var html_72ccea03fb300687c2f9984758868882 = $(`<div id="html_72ccea03fb300687c2f9984758868882" style="width: 100.0%; height: 100.0%;">             <b>Vancouver Learning Centre</b><br>             Community: Vancouver<br>             Year: 2023<br>             Initiative: REAP Presentation<br>             Students reached: 65<br>             Modality: Hybrid<br>             Notes: Application tips         </div>`)[0];
+            popup_732949201a99c65454f9889ecef72237.setContent(html_72ccea03fb300687c2f9984758868882);
+        
+
+        circle_marker_7614de97b0891be154b67ede47792100.bindPopup(popup_732949201a99c65454f9889ecef72237)
+        ;
+
+        
+    
+    
+            var feature_group_0d5cb3c3d3a9813b6018aa30382817f1 = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_3eb8d6c5e4384ebcbbc34e8e8b7dac49 = L.circleMarker(
+                [55.7606, -120.235],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_ad49da530eb4e8c7fd8c7270ccb15fe4 = L.popup({"maxWidth": 300});
+
+        
+            var html_f4aa4d6ff6ec69c2dde8963cfe732fd6 = $(`<div id="html_f4aa4d6ff6ec69c2dde8963cfe732fd6" style="width: 100.0%; height: 100.0%;">             <b>Dawson Creek Community School</b><br>             Community: Dawson Creek<br>             Year: 2023<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 90<br>             Modality: Hybrid<br>             Notes: Workshop         </div>`)[0];
+            popup_ad49da530eb4e8c7fd8c7270ccb15fe4.setContent(html_f4aa4d6ff6ec69c2dde8963cfe732fd6);
+        
+
+        circle_marker_3eb8d6c5e4384ebcbbc34e8e8b7dac49.bindPopup(popup_ad49da530eb4e8c7fd8c7270ccb15fe4)
+        ;
+
+        
+    
+    
+            var circle_marker_cc52441d05e0cb20f9bb707489260fe0 = L.circleMarker(
+                [55.7606, -120.235],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_48d0671cfad785acb80a2220e2c7f8c8 = L.popup({"maxWidth": 300});
+
+        
+            var html_89c546b349b955c08e8e77bd19577fa7 = $(`<div id="html_89c546b349b955c08e8e77bd19577fa7" style="width: 100.0%; height: 100.0%;">             <b>Dawson Creek Elem School</b><br>             Community: Dawson Creek<br>             Year: 2023<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 128<br>             Modality: In-person<br>             Notes: Workshop         </div>`)[0];
+            popup_48d0671cfad785acb80a2220e2c7f8c8.setContent(html_89c546b349b955c08e8e77bd19577fa7);
+        
+
+        circle_marker_cc52441d05e0cb20f9bb707489260fe0.bindPopup(popup_48d0671cfad785acb80a2220e2c7f8c8)
+        ;
+
+        
+    
+    
+            var circle_marker_dbaee493afa07ed48a8dcfa78c092fc6 = L.circleMarker(
+                [50.9971, -118.1957],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_b7eb9d74dcd2ebd73fecc994d60edffd = L.popup({"maxWidth": 300});
+
+        
+            var html_088b33e0c724579ca0fd6ffa853b4ecd = $(`<div id="html_088b33e0c724579ca0fd6ffa853b4ecd" style="width: 100.0%; height: 100.0%;">             <b>Revelstoke Secondary</b><br>             Community: Revelstoke<br>             Year: 2023<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 71<br>             Modality: In-person<br>             Notes: Workshop         </div>`)[0];
+            popup_b7eb9d74dcd2ebd73fecc994d60edffd.setContent(html_088b33e0c724579ca0fd6ffa853b4ecd);
+        
+
+        circle_marker_dbaee493afa07ed48a8dcfa78c092fc6.bindPopup(popup_b7eb9d74dcd2ebd73fecc994d60edffd)
+        ;
+
+        
+    
+    
+            var circle_marker_12da64dfddc52f8731641a45d3fab866 = L.circleMarker(
+                [49.2827, -123.1207],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_581469d234164c33fd44d6fed51bc0a0 = L.popup({"maxWidth": 300});
+
+        
+            var html_74003f038d1c9aa062ac756092a9bcfa = $(`<div id="html_74003f038d1c9aa062ac756092a9bcfa" style="width: 100.0%; height: 100.0%;">             <b>Vancouver High School</b><br>             Community: Vancouver<br>             Year: 2023<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 86<br>             Modality: Virtual<br>             Notes: Workshop         </div>`)[0];
+            popup_581469d234164c33fd44d6fed51bc0a0.setContent(html_74003f038d1c9aa062ac756092a9bcfa);
+        
+
+        circle_marker_12da64dfddc52f8731641a45d3fab866.bindPopup(popup_581469d234164c33fd44d6fed51bc0a0)
+        ;
+
+        
+    
+    
+            var circle_marker_6e5ae623b3699c8537696a4a1fb57111 = L.circleMarker(
+                [50.267, -119.272],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_1577cfcfdf8585d30b007f0080e9267a = L.popup({"maxWidth": 300});
+
+        
+            var html_4436836d347902fad52b72b9fd31693d = $(`<div id="html_4436836d347902fad52b72b9fd31693d" style="width: 100.0%; height: 100.0%;">             <b>Vernon Elem School</b><br>             Community: Vernon<br>             Year: 2023<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 125<br>             Modality: Virtual<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_1577cfcfdf8585d30b007f0080e9267a.setContent(html_4436836d347902fad52b72b9fd31693d);
+        
+
+        circle_marker_6e5ae623b3699c8537696a4a1fb57111.bindPopup(popup_1577cfcfdf8585d30b007f0080e9267a)
+        ;
+
+        
+    
+    
+            var circle_marker_7d1cef9640a2a63ffe7c0c2023b3433a = L.circleMarker(
+                [50.1163, -122.9574],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+        var popup_778ccf3d06ae3b6002ca76dd86d16876 = L.popup({"maxWidth": 300});
+
+        
+            var html_e4d1530f8df8ca325bc6a09955263ac4 = $(`<div id="html_e4d1530f8df8ca325bc6a09955263ac4" style="width: 100.0%; height: 100.0%;">             <b>Whistler Elem School</b><br>             Community: Whistler<br>             Year: 2023<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 71<br>             Modality: Virtual<br>             Notes: Application tips         </div>`)[0];
+            popup_778ccf3d06ae3b6002ca76dd86d16876.setContent(html_e4d1530f8df8ca325bc6a09955263ac4);
+        
+
+        circle_marker_7d1cef9640a2a63ffe7c0c2023b3433a.bindPopup(popup_778ccf3d06ae3b6002ca76dd86d16876)
+        ;
+
+        
+    
+    
+            var feature_group_406fae8c2cc04fe1dfd4dbcb60ed4e36 = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_72d1ad881cdb093d15a6e7618e6c076d = L.circleMarker(
+                [55.7606, -120.235],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_e9d5aae86be439fedda08c947ad95b9a = L.popup({"maxWidth": 300});
+
+        
+            var html_e7202782b5350c56155c2cef0890b214 = $(`<div id="html_e7202782b5350c56155c2cef0890b214" style="width: 100.0%; height: 100.0%;">             <b>Dawson Creek Community School</b><br>             Community: Dawson Creek<br>             Year: 2024<br>             Initiative: High School Mentoring<br>             Students reached: 122<br>             Modality: Hybrid<br>             Notes: Application tips         </div>`)[0];
+            popup_e9d5aae86be439fedda08c947ad95b9a.setContent(html_e7202782b5350c56155c2cef0890b214);
+        
+
+        circle_marker_72d1ad881cdb093d15a6e7618e6c076d.bindPopup(popup_e9d5aae86be439fedda08c947ad95b9a)
+        ;
+
+        
+    
+    
+            var circle_marker_06e7f507154328ffb845c72c67fcc189 = L.circleMarker(
+                [50.6745, -120.3273],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_70909525453fffb650fe00b48b7e4113 = L.popup({"maxWidth": 300});
+
+        
+            var html_108f4e746ad213874fd4302ab8fe08fc = $(`<div id="html_108f4e746ad213874fd4302ab8fe08fc" style="width: 100.0%; height: 100.0%;">             <b>Kamloops Secondary</b><br>             Community: Kamloops<br>             Year: 2024<br>             Initiative: High School Mentoring<br>             Students reached: 69<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_70909525453fffb650fe00b48b7e4113.setContent(html_108f4e746ad213874fd4302ab8fe08fc);
+        
+
+        circle_marker_06e7f507154328ffb845c72c67fcc189.bindPopup(popup_70909525453fffb650fe00b48b7e4113)
+        ;
+
+        
+    
+    
+            var circle_marker_833be8df3a6ad2adb9190e8947f507b0 = L.circleMarker(
+                [49.1659, -123.9401],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_55b2c7bf6efb52c0a2bc593570dd24ae = L.popup({"maxWidth": 300});
+
+        
+            var html_09493874439b5b75c022614ed2a1c1a5 = $(`<div id="html_09493874439b5b75c022614ed2a1c1a5" style="width: 100.0%; height: 100.0%;">             <b>Nanaimo Elem School</b><br>             Community: Nanaimo<br>             Year: 2024<br>             Initiative: High School Mentoring<br>             Students reached: 44<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_55b2c7bf6efb52c0a2bc593570dd24ae.setContent(html_09493874439b5b75c022614ed2a1c1a5);
+        
+
+        circle_marker_833be8df3a6ad2adb9190e8947f507b0.bindPopup(popup_55b2c7bf6efb52c0a2bc593570dd24ae)
+        ;
+
+        
+    
+    
+            var circle_marker_a9423e9c2af04f8b97ba7d418ed5b6ba = L.circleMarker(
+                [52.9784, -122.4927],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_1a90d89284242954b92283e7ea67d483 = L.popup({"maxWidth": 300});
+
+        
+            var html_46adcbb482dedfe6ca24cc1028afa6dd = $(`<div id="html_46adcbb482dedfe6ca24cc1028afa6dd" style="width: 100.0%; height: 100.0%;">             <b>Quesnel Elem School</b><br>             Community: Quesnel<br>             Year: 2024<br>             Initiative: High School Mentoring<br>             Students reached: 86<br>             Modality: In-person<br>             Notes: Workshop         </div>`)[0];
+            popup_1a90d89284242954b92283e7ea67d483.setContent(html_46adcbb482dedfe6ca24cc1028afa6dd);
+        
+
+        circle_marker_a9423e9c2af04f8b97ba7d418ed5b6ba.bindPopup(popup_1a90d89284242954b92283e7ea67d483)
+        ;
+
+        
+    
+    
+            var circle_marker_fe08e28ae3bf17bfd9e06063f6d56080 = L.circleMarker(
+                [49.7016, -123.1558],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_48cba4e1ea9f1b5cc6a8ad4d74048a70 = L.popup({"maxWidth": 300});
+
+        
+            var html_aba211b810140fd889dcc67da7abae9b = $(`<div id="html_aba211b810140fd889dcc67da7abae9b" style="width: 100.0%; height: 100.0%;">             <b>Squamish College</b><br>             Community: Squamish<br>             Year: 2024<br>             Initiative: High School Mentoring<br>             Students reached: 53<br>             Modality: Hybrid<br>             Notes: Career panel         </div>`)[0];
+            popup_48cba4e1ea9f1b5cc6a8ad4d74048a70.setContent(html_aba211b810140fd889dcc67da7abae9b);
+        
+
+        circle_marker_fe08e28ae3bf17bfd9e06063f6d56080.bindPopup(popup_48cba4e1ea9f1b5cc6a8ad4d74048a70)
+        ;
+
+        
+    
+    
+            var circle_marker_a052f6909a478fbcbb99c6d2c953f0e0 = L.circleMarker(
+                [50.267, -119.272],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_572a65de28cb3abe34ae11c1967ef3c0 = L.popup({"maxWidth": 300});
+
+        
+            var html_1ad06623cb491459b46aa3f0d062cc05 = $(`<div id="html_1ad06623cb491459b46aa3f0d062cc05" style="width: 100.0%; height: 100.0%;">             <b>Vernon Learning Centre</b><br>             Community: Vernon<br>             Year: 2024<br>             Initiative: High School Mentoring<br>             Students reached: 81<br>             Modality: Virtual<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_572a65de28cb3abe34ae11c1967ef3c0.setContent(html_1ad06623cb491459b46aa3f0d062cc05);
+        
+
+        circle_marker_a052f6909a478fbcbb99c6d2c953f0e0.bindPopup(popup_572a65de28cb3abe34ae11c1967ef3c0)
+        ;
+
+        
+    
+    
+            var circle_marker_c98e20f5d674576277c1fea6d78a3baf = L.circleMarker(
+                [48.4284, -123.3656],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_778dbc09d7dacb12cebc0a0c600ab3a8 = L.popup({"maxWidth": 300});
+
+        
+            var html_b7363bb8c8b0ca1504325d1143f9700e = $(`<div id="html_b7363bb8c8b0ca1504325d1143f9700e" style="width: 100.0%; height: 100.0%;">             <b>Victoria Secondary</b><br>             Community: Victoria<br>             Year: 2024<br>             Initiative: High School Mentoring<br>             Students reached: 106<br>             Modality: In-person<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_778dbc09d7dacb12cebc0a0c600ab3a8.setContent(html_b7363bb8c8b0ca1504325d1143f9700e);
+        
+
+        circle_marker_c98e20f5d674576277c1fea6d78a3baf.bindPopup(popup_778dbc09d7dacb12cebc0a0c600ab3a8)
+        ;
+
+        
+    
+    
+            var circle_marker_8f3d3121c1a21f4a2427375dd86b32a8 = L.circleMarker(
+                [48.4284, -123.3656],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_0af00f58de2a5cea6298e9fc22a37a1c = L.popup({"maxWidth": 300});
+
+        
+            var html_8753b07e653fe33a54ba227b2bb6af8c = $(`<div id="html_8753b07e653fe33a54ba227b2bb6af8c" style="width: 100.0%; height: 100.0%;">             <b>Victoria Secondary</b><br>             Community: Victoria<br>             Year: 2024<br>             Initiative: High School Mentoring<br>             Students reached: 90<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_0af00f58de2a5cea6298e9fc22a37a1c.setContent(html_8753b07e653fe33a54ba227b2bb6af8c);
+        
+
+        circle_marker_8f3d3121c1a21f4a2427375dd86b32a8.bindPopup(popup_0af00f58de2a5cea6298e9fc22a37a1c)
+        ;
+
+        
+    
+    
+            var feature_group_73fef4acdaa49733cddbc43ff3a93ad3 = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_7215832eeb28c623782b0febd0b7cb35 = L.circleMarker(
+                [54.7804, -127.1743],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_a47faea6a81dc878f6cbfb7fb83027ae = L.popup({"maxWidth": 300});
+
+        
+            var html_ef906f4b7cd46f102d6e52da3242f6ff = $(`<div id="html_ef906f4b7cd46f102d6e52da3242f6ff" style="width: 100.0%; height: 100.0%;">             <b>Smithers Elem School</b><br>             Community: Smithers<br>             Year: 2024<br>             Initiative: REAP Presentation<br>             Students reached: 150<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_a47faea6a81dc878f6cbfb7fb83027ae.setContent(html_ef906f4b7cd46f102d6e52da3242f6ff);
+        
+
+        circle_marker_7215832eeb28c623782b0febd0b7cb35.bindPopup(popup_a47faea6a81dc878f6cbfb7fb83027ae)
+        ;
+
+        
+    
+    
+            var circle_marker_925005042c4764387488f1205230589f = L.circleMarker(
+                [49.7016, -123.1558],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_144a7f246056e45c3a1e1a7514de2772 = L.popup({"maxWidth": 300});
+
+        
+            var html_cfeb9ae32d216929b164e5a6731e3576 = $(`<div id="html_cfeb9ae32d216929b164e5a6731e3576" style="width: 100.0%; height: 100.0%;">             <b>Squamish Learning Centre</b><br>             Community: Squamish<br>             Year: 2024<br>             Initiative: REAP Presentation<br>             Students reached: 68<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_144a7f246056e45c3a1e1a7514de2772.setContent(html_cfeb9ae32d216929b164e5a6731e3576);
+        
+
+        circle_marker_925005042c4764387488f1205230589f.bindPopup(popup_144a7f246056e45c3a1e1a7514de2772)
+        ;
+
+        
+    
+    
+            var feature_group_9cbb530178d413b65e92374727f914be = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_738469b899495315db0cbb5d97c83bf6 = L.circleMarker(
+                [54.0524, -128.653],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_1d62dbdf3cae93cad266f7f62ee4426e = L.popup({"maxWidth": 300});
+
+        
+            var html_574839dab94f7ba85f17617961e93612 = $(`<div id="html_574839dab94f7ba85f17617961e93612" style="width: 100.0%; height: 100.0%;">             <b>Kitimat Elem School</b><br>             Community: Kitimat<br>             Year: 2024<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 117<br>             Modality: Virtual<br>             Notes: Workshop         </div>`)[0];
+            popup_1d62dbdf3cae93cad266f7f62ee4426e.setContent(html_574839dab94f7ba85f17617961e93612);
+        
+
+        circle_marker_738469b899495315db0cbb5d97c83bf6.bindPopup(popup_1d62dbdf3cae93cad266f7f62ee4426e)
+        ;
+
+        
+    
+    
+            var circle_marker_9bb38f19afca663712002847efa73fd9 = L.circleMarker(
+                [49.4991, -119.5937],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_7d2034fa92b694f4a7e0f36ffd07ad48 = L.popup({"maxWidth": 300});
+
+        
+            var html_2eef3e0ddd66228edccd956643386e79 = $(`<div id="html_2eef3e0ddd66228edccd956643386e79" style="width: 100.0%; height: 100.0%;">             <b>Penticton Learning Centre</b><br>             Community: Penticton<br>             Year: 2024<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 86<br>             Modality: Virtual<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_7d2034fa92b694f4a7e0f36ffd07ad48.setContent(html_2eef3e0ddd66228edccd956643386e79);
+        
+
+        circle_marker_9bb38f19afca663712002847efa73fd9.bindPopup(popup_7d2034fa92b694f4a7e0f36ffd07ad48)
+        ;
+
+        
+    
+    
+            var circle_marker_697cb45c66f49edd93ed2222f78db4dc = L.circleMarker(
+                [53.9171, -122.7497],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_acf4002cc441f2fbc2b78ca1dd960076 = L.popup({"maxWidth": 300});
+
+        
+            var html_c2f33c78f3fe0b1dd2872aab44f0fe84 = $(`<div id="html_c2f33c78f3fe0b1dd2872aab44f0fe84" style="width: 100.0%; height: 100.0%;">             <b>Prince George Secondary</b><br>             Community: Prince George<br>             Year: 2024<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 68<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_acf4002cc441f2fbc2b78ca1dd960076.setContent(html_c2f33c78f3fe0b1dd2872aab44f0fe84);
+        
+
+        circle_marker_697cb45c66f49edd93ed2222f78db4dc.bindPopup(popup_acf4002cc441f2fbc2b78ca1dd960076)
+        ;
+
+        
+    
+    
+            var circle_marker_4da443b5bff495ba4da98d9d0e0ad35a = L.circleMarker(
+                [50.9971, -118.1957],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_3741ce2f90a8d2bd9488abcd05f3ac39 = L.popup({"maxWidth": 300});
+
+        
+            var html_5cd156dfc0905479f872997c234e0d2b = $(`<div id="html_5cd156dfc0905479f872997c234e0d2b" style="width: 100.0%; height: 100.0%;">             <b>Revelstoke Elem School</b><br>             Community: Revelstoke<br>             Year: 2024<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 47<br>             Modality: Hybrid<br>             Notes: Career panel         </div>`)[0];
+            popup_3741ce2f90a8d2bd9488abcd05f3ac39.setContent(html_5cd156dfc0905479f872997c234e0d2b);
+        
+
+        circle_marker_4da443b5bff495ba4da98d9d0e0ad35a.bindPopup(popup_3741ce2f90a8d2bd9488abcd05f3ac39)
+        ;
+
+        
+    
+    
+            var circle_marker_f068ead237b7a903e25dbe46e558b8d9 = L.circleMarker(
+                [50.9971, -118.1957],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_d1425fe05afb7dfac9e666931f4adb21 = L.popup({"maxWidth": 300});
+
+        
+            var html_a06db3bfc8109689bca982769b0c997c = $(`<div id="html_a06db3bfc8109689bca982769b0c997c" style="width: 100.0%; height: 100.0%;">             <b>Revelstoke Secondary</b><br>             Community: Revelstoke<br>             Year: 2024<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 126<br>             Modality: In-person<br>             Notes: Career panel         </div>`)[0];
+            popup_d1425fe05afb7dfac9e666931f4adb21.setContent(html_a06db3bfc8109689bca982769b0c997c);
+        
+
+        circle_marker_f068ead237b7a903e25dbe46e558b8d9.bindPopup(popup_d1425fe05afb7dfac9e666931f4adb21)
+        ;
+
+        
+    
+    
+            var circle_marker_2dedbbd684473f7487159c157f33bc92 = L.circleMarker(
+                [50.7026, -119.272],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_056bfabc666325848b10b77c7475b135 = L.popup({"maxWidth": 300});
+
+        
+            var html_06ba1cc589e610835f428e0bf8309a34 = $(`<div id="html_06ba1cc589e610835f428e0bf8309a34" style="width: 100.0%; height: 100.0%;">             <b>Salmon Arm College</b><br>             Community: Salmon Arm<br>             Year: 2024<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 81<br>             Modality: Virtual<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_056bfabc666325848b10b77c7475b135.setContent(html_06ba1cc589e610835f428e0bf8309a34);
+        
+
+        circle_marker_2dedbbd684473f7487159c157f33bc92.bindPopup(popup_056bfabc666325848b10b77c7475b135)
+        ;
+
+        
+    
+    
+            var circle_marker_f15e2aca398bf45dd769281c7b6616dc = L.circleMarker(
+                [49.7016, -123.1558],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_73b5e4acac4c85523b0e48db452bd987 = L.popup({"maxWidth": 300});
+
+        
+            var html_1e049124f4199c2a2443cdc5465dd8e1 = $(`<div id="html_1e049124f4199c2a2443cdc5465dd8e1" style="width: 100.0%; height: 100.0%;">             <b>Squamish High School</b><br>             Community: Squamish<br>             Year: 2024<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 26<br>             Modality: Virtual<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_73b5e4acac4c85523b0e48db452bd987.setContent(html_1e049124f4199c2a2443cdc5465dd8e1);
+        
+
+        circle_marker_f15e2aca398bf45dd769281c7b6616dc.bindPopup(popup_73b5e4acac4c85523b0e48db452bd987)
+        ;
+
+        
+    
+    
+            var circle_marker_110525cb686617cbb1f7809fad64e6cb = L.circleMarker(
+                [54.5164, -128.6035],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+        var popup_350e22d54adce0ff0cefaf826ba584c6 = L.popup({"maxWidth": 300});
+
+        
+            var html_00785b08ccd906fa07f790fdece52892 = $(`<div id="html_00785b08ccd906fa07f790fdece52892" style="width: 100.0%; height: 100.0%;">             <b>Terrace High School</b><br>             Community: Terrace<br>             Year: 2024<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 110<br>             Modality: In-person<br>             Notes: Application tips         </div>`)[0];
+            popup_350e22d54adce0ff0cefaf826ba584c6.setContent(html_00785b08ccd906fa07f790fdece52892);
+        
+
+        circle_marker_110525cb686617cbb1f7809fad64e6cb.bindPopup(popup_350e22d54adce0ff0cefaf826ba584c6)
+        ;
+
+        
+    
+    
+            var feature_group_d7012f28195a4ecabbff21b6790ac38e = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_f9b138eee9c9e8bedfc8901ca87e73d0 = L.circleMarker(
+                [49.6866, -124.9936],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_560c1839a6eb948fda71a9065c219971 = L.popup({"maxWidth": 300});
+
+        
+            var html_88b0c5111d7a7023c3561cdf14d56d86 = $(`<div id="html_88b0c5111d7a7023c3561cdf14d56d86" style="width: 100.0%; height: 100.0%;">             <b>Courtenay College</b><br>             Community: Courtenay<br>             Year: 2025<br>             Initiative: High School Mentoring<br>             Students reached: 95<br>             Modality: Virtual<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_560c1839a6eb948fda71a9065c219971.setContent(html_88b0c5111d7a7023c3561cdf14d56d86);
+        
+
+        circle_marker_f9b138eee9c9e8bedfc8901ca87e73d0.bindPopup(popup_560c1839a6eb948fda71a9065c219971)
+        ;
+
+        
+    
+    
+            var circle_marker_dd7701b8eb66129a5c858e089ce7bf4b = L.circleMarker(
+                [56.2524, -120.8467],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_f7e932226d3590fda33a35f522acc7af = L.popup({"maxWidth": 300});
+
+        
+            var html_053c95a9c26d17f07f4887e0e5b7d1eb = $(`<div id="html_053c95a9c26d17f07f4887e0e5b7d1eb" style="width: 100.0%; height: 100.0%;">             <b>Fort St. John Community School</b><br>             Community: Fort St. John<br>             Year: 2025<br>             Initiative: High School Mentoring<br>             Students reached: 86<br>             Modality: Hybrid<br>             Notes: Application tips         </div>`)[0];
+            popup_f7e932226d3590fda33a35f522acc7af.setContent(html_053c95a9c26d17f07f4887e0e5b7d1eb);
+        
+
+        circle_marker_dd7701b8eb66129a5c858e089ce7bf4b.bindPopup(popup_f7e932226d3590fda33a35f522acc7af)
+        ;
+
+        
+    
+    
+            var circle_marker_43ca652f3fdc60cf2659f3f4607e546e = L.circleMarker(
+                [52.9784, -122.4927],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_f5b3d62c389e71791e111d41a652a317 = L.popup({"maxWidth": 300});
+
+        
+            var html_6c3d8263e6a939d8872193c24dde8e5c = $(`<div id="html_6c3d8263e6a939d8872193c24dde8e5c" style="width: 100.0%; height: 100.0%;">             <b>Quesnel Secondary</b><br>             Community: Quesnel<br>             Year: 2025<br>             Initiative: High School Mentoring<br>             Students reached: 18<br>             Modality: Virtual<br>             Notes: Workshop         </div>`)[0];
+            popup_f5b3d62c389e71791e111d41a652a317.setContent(html_6c3d8263e6a939d8872193c24dde8e5c);
+        
+
+        circle_marker_43ca652f3fdc60cf2659f3f4607e546e.bindPopup(popup_f5b3d62c389e71791e111d41a652a317)
+        ;
+
+        
+    
+    
+            var circle_marker_94b9f5aecc330eeef53978ce1ac1fff6 = L.circleMarker(
+                [49.7016, -123.1558],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_ce6e573153b00a721ce359acb9f82c88 = L.popup({"maxWidth": 300});
+
+        
+            var html_ee27870aa4a02034a05eb62b8a1adba3 = $(`<div id="html_ee27870aa4a02034a05eb62b8a1adba3" style="width: 100.0%; height: 100.0%;">             <b>Squamish College</b><br>             Community: Squamish<br>             Year: 2025<br>             Initiative: High School Mentoring<br>             Students reached: 93<br>             Modality: In-person<br>             Notes: Career panel         </div>`)[0];
+            popup_ce6e573153b00a721ce359acb9f82c88.setContent(html_ee27870aa4a02034a05eb62b8a1adba3);
+        
+
+        circle_marker_94b9f5aecc330eeef53978ce1ac1fff6.bindPopup(popup_ce6e573153b00a721ce359acb9f82c88)
+        ;
+
+        
+    
+    
+            var circle_marker_1b43d0dac9e40b1b6b1fa07f370d73bc = L.circleMarker(
+                [54.5164, -128.6035],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_c3d3f0566d1f65b9d8ecaeb2d9275dc3 = L.popup({"maxWidth": 300});
+
+        
+            var html_04467e0c5d13bad74e8b60a305e1c537 = $(`<div id="html_04467e0c5d13bad74e8b60a305e1c537" style="width: 100.0%; height: 100.0%;">             <b>Terrace High School</b><br>             Community: Terrace<br>             Year: 2025<br>             Initiative: High School Mentoring<br>             Students reached: 66<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_c3d3f0566d1f65b9d8ecaeb2d9275dc3.setContent(html_04467e0c5d13bad74e8b60a305e1c537);
+        
+
+        circle_marker_1b43d0dac9e40b1b6b1fa07f370d73bc.bindPopup(popup_c3d3f0566d1f65b9d8ecaeb2d9275dc3)
+        ;
+
+        
+    
+    
+            var circle_marker_90e05ad5ffced19610d74945be53f35c = L.circleMarker(
+                [49.2827, -123.1207],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_f58fbd2a7d184d57f9ebe921138be626 = L.popup({"maxWidth": 300});
+
+        
+            var html_c0f3ac29656219579ff1f9242b605cf5 = $(`<div id="html_c0f3ac29656219579ff1f9242b605cf5" style="width: 100.0%; height: 100.0%;">             <b>Vancouver High School</b><br>             Community: Vancouver<br>             Year: 2025<br>             Initiative: High School Mentoring<br>             Students reached: 55<br>             Modality: Hybrid<br>             Notes: Application tips         </div>`)[0];
+            popup_f58fbd2a7d184d57f9ebe921138be626.setContent(html_c0f3ac29656219579ff1f9242b605cf5);
+        
+
+        circle_marker_90e05ad5ffced19610d74945be53f35c.bindPopup(popup_f58fbd2a7d184d57f9ebe921138be626)
+        ;
+
+        
+    
+    
+            var circle_marker_6a2e6d1e8133a0b0353e7c3f6f62902e = L.circleMarker(
+                [50.1163, -122.9574],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_5202658f0f003fb7d5fb0ced056f5eea = L.popup({"maxWidth": 300});
+
+        
+            var html_21ac2d5a0ea92706807fa460254e4e50 = $(`<div id="html_21ac2d5a0ea92706807fa460254e4e50" style="width: 100.0%; height: 100.0%;">             <b>Whistler High School</b><br>             Community: Whistler<br>             Year: 2025<br>             Initiative: High School Mentoring<br>             Students reached: 60<br>             Modality: Hybrid<br>             Notes: Mentor Q&A         </div>`)[0];
+            popup_5202658f0f003fb7d5fb0ced056f5eea.setContent(html_21ac2d5a0ea92706807fa460254e4e50);
+        
+
+        circle_marker_6a2e6d1e8133a0b0353e7c3f6f62902e.bindPopup(popup_5202658f0f003fb7d5fb0ced056f5eea)
+        ;
+
+        
+    
+    
+            var circle_marker_6d792b9a9d4819402a71646602f71f02 = L.circleMarker(
+                [52.1415, -122.1417],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_1da8bbc3305ccdc5f06a9fbf5014ae8d = L.popup({"maxWidth": 300});
+
+        
+            var html_ff2f92a8d4e4d2bd0d4ace1d324feb57 = $(`<div id="html_ff2f92a8d4e4d2bd0d4ace1d324feb57" style="width: 100.0%; height: 100.0%;">             <b>Williams Lake Elem School</b><br>             Community: Williams Lake<br>             Year: 2025<br>             Initiative: High School Mentoring<br>             Students reached: 78<br>             Modality: Virtual<br>             Notes: Workshop         </div>`)[0];
+            popup_1da8bbc3305ccdc5f06a9fbf5014ae8d.setContent(html_ff2f92a8d4e4d2bd0d4ace1d324feb57);
+        
+
+        circle_marker_6d792b9a9d4819402a71646602f71f02.bindPopup(popup_1da8bbc3305ccdc5f06a9fbf5014ae8d)
+        ;
+
+        
+    
+    
+            var feature_group_39d210e366c12623ef4485dcb53a773c = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_70b4903d41bea895f96824cf02a1fa21 = L.circleMarker(
+                [49.512, -115.7694],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_43e47984427de639752c56c5540770a7 = L.popup({"maxWidth": 300});
+
+        
+            var html_be8689c499618bd2bd19ec85b0a8a8e5 = $(`<div id="html_be8689c499618bd2bd19ec85b0a8a8e5" style="width: 100.0%; height: 100.0%;">             <b>Cranbrook College</b><br>             Community: Cranbrook<br>             Year: 2025<br>             Initiative: REAP Presentation<br>             Students reached: 136<br>             Modality: Virtual<br>             Notes: Application tips         </div>`)[0];
+            popup_43e47984427de639752c56c5540770a7.setContent(html_be8689c499618bd2bd19ec85b0a8a8e5);
+        
+
+        circle_marker_70b4903d41bea895f96824cf02a1fa21.bindPopup(popup_43e47984427de639752c56c5540770a7)
+        ;
+
+        
+    
+    
+            var circle_marker_19732080352130df398edd37419df2c3 = L.circleMarker(
+                [50.6745, -120.3273],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_5857d65b55032f6265937bb072ac84e6 = L.popup({"maxWidth": 300});
+
+        
+            var html_bad9512f569ef56a6a8d690bde926e97 = $(`<div id="html_bad9512f569ef56a6a8d690bde926e97" style="width: 100.0%; height: 100.0%;">             <b>Kamloops High School</b><br>             Community: Kamloops<br>             Year: 2025<br>             Initiative: REAP Presentation<br>             Students reached: 117<br>             Modality: In-person<br>             Notes: Workshop         </div>`)[0];
+            popup_5857d65b55032f6265937bb072ac84e6.setContent(html_bad9512f569ef56a6a8d690bde926e97);
+        
+
+        circle_marker_19732080352130df398edd37419df2c3.bindPopup(popup_5857d65b55032f6265937bb072ac84e6)
+        ;
+
+        
+    
+    
+            var circle_marker_bdb492d8b80b415fa1eb5459e4778fbb = L.circleMarker(
+                [49.888, -119.496],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_a606fdfa9b10fbd49ea81fd9a460cef2 = L.popup({"maxWidth": 300});
+
+        
+            var html_7f2c0ea861421cbc744ba59c1c9e809a = $(`<div id="html_7f2c0ea861421cbc744ba59c1c9e809a" style="width: 100.0%; height: 100.0%;">             <b>Kelowna College</b><br>             Community: Kelowna<br>             Year: 2025<br>             Initiative: REAP Presentation<br>             Students reached: 123<br>             Modality: Hybrid<br>             Notes: Career panel         </div>`)[0];
+            popup_a606fdfa9b10fbd49ea81fd9a460cef2.setContent(html_7f2c0ea861421cbc744ba59c1c9e809a);
+        
+
+        circle_marker_bdb492d8b80b415fa1eb5459e4778fbb.bindPopup(popup_a606fdfa9b10fbd49ea81fd9a460cef2)
+        ;
+
+        
+    
+    
+            var circle_marker_cd25a0adec9108e03bf5463a7128bd73 = L.circleMarker(
+                [49.1659, -123.9401],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_4ec919be98e4d1b56881fd7f1c5e73a8 = L.popup({"maxWidth": 300});
+
+        
+            var html_bfbea44e49990e90bb472da9ce81a295 = $(`<div id="html_bfbea44e49990e90bb472da9ce81a295" style="width: 100.0%; height: 100.0%;">             <b>Nanaimo Learning Centre</b><br>             Community: Nanaimo<br>             Year: 2025<br>             Initiative: REAP Presentation<br>             Students reached: 97<br>             Modality: In-person<br>             Notes: Career panel         </div>`)[0];
+            popup_4ec919be98e4d1b56881fd7f1c5e73a8.setContent(html_bfbea44e49990e90bb472da9ce81a295);
+        
+
+        circle_marker_cd25a0adec9108e03bf5463a7128bd73.bindPopup(popup_4ec919be98e4d1b56881fd7f1c5e73a8)
+        ;
+
+        
+    
+    
+            var feature_group_8e9ac6b2b82f6f233c1b42bc99f70165 = L.featureGroup(
+                {}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+        
+    
+            var circle_marker_a3b9c977cfc63d4c729678e873c818f9 = L.circleMarker(
+                [54.0524, -128.653],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_3988bab4e74dd23f919a16d8a56f058e = L.popup({"maxWidth": 300});
+
+        
+            var html_748baf26fe62cb0710539f89e2b2cfa6 = $(`<div id="html_748baf26fe62cb0710539f89e2b2cfa6" style="width: 100.0%; height: 100.0%;">             <b>Kitimat High School</b><br>             Community: Kitimat<br>             Year: 2025<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 27<br>             Modality: Hybrid<br>             Notes: Workshop         </div>`)[0];
+            popup_3988bab4e74dd23f919a16d8a56f058e.setContent(html_748baf26fe62cb0710539f89e2b2cfa6);
+        
+
+        circle_marker_a3b9c977cfc63d4c729678e873c818f9.bindPopup(popup_3988bab4e74dd23f919a16d8a56f058e)
+        ;
+
+        
+    
+    
+            var circle_marker_11bf6d7742f58ff3dea270e3ec011e1c = L.circleMarker(
+                [49.1659, -123.9401],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_ba7d1a8d8c263d49ea8cc1a690aaee23 = L.popup({"maxWidth": 300});
+
+        
+            var html_3e3c2c4f578ca7e3d45eff58112a2719 = $(`<div id="html_3e3c2c4f578ca7e3d45eff58112a2719" style="width: 100.0%; height: 100.0%;">             <b>Nanaimo Elem School</b><br>             Community: Nanaimo<br>             Year: 2025<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 55<br>             Modality: In-person<br>             Notes: Career panel         </div>`)[0];
+            popup_ba7d1a8d8c263d49ea8cc1a690aaee23.setContent(html_3e3c2c4f578ca7e3d45eff58112a2719);
+        
+
+        circle_marker_11bf6d7742f58ff3dea270e3ec011e1c.bindPopup(popup_ba7d1a8d8c263d49ea8cc1a690aaee23)
+        ;
+
+        
+    
+    
+            var circle_marker_8f73c0d27002caff0dc9a0d28b8b1cec = L.circleMarker(
+                [50.7026, -119.272],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_88f17c6582552e4d9e17747f25509075 = L.popup({"maxWidth": 300});
+
+        
+            var html_c89c924d2fcdd205b1b07ff50436eca3 = $(`<div id="html_c89c924d2fcdd205b1b07ff50436eca3" style="width: 100.0%; height: 100.0%;">             <b>Salmon Arm College</b><br>             Community: Salmon Arm<br>             Year: 2025<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 55<br>             Modality: Hybrid<br>             Notes: Application tips         </div>`)[0];
+            popup_88f17c6582552e4d9e17747f25509075.setContent(html_c89c924d2fcdd205b1b07ff50436eca3);
+        
+
+        circle_marker_8f73c0d27002caff0dc9a0d28b8b1cec.bindPopup(popup_88f17c6582552e4d9e17747f25509075)
+        ;
+
+        
+    
+    
+            var circle_marker_e682106322f3ee88bc4631e858b5883e = L.circleMarker(
+                [49.0955, -117.7119],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_95bded296e9f8eaf49e3fe552da3de67 = L.popup({"maxWidth": 300});
+
+        
+            var html_363539b0b6b27e01689e6668b20d7cd4 = $(`<div id="html_363539b0b6b27e01689e6668b20d7cd4" style="width: 100.0%; height: 100.0%;">             <b>Trail Elem School</b><br>             Community: Trail<br>             Year: 2025<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 30<br>             Modality: Virtual<br>             Notes: Application tips         </div>`)[0];
+            popup_95bded296e9f8eaf49e3fe552da3de67.setContent(html_363539b0b6b27e01689e6668b20d7cd4);
+        
+
+        circle_marker_e682106322f3ee88bc4631e858b5883e.bindPopup(popup_95bded296e9f8eaf49e3fe552da3de67)
+        ;
+
+        
+    
+    
+            var circle_marker_b84f3cd2510548d3be5ba976c8dbb938 = L.circleMarker(
+                [49.2827, -123.1207],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+        var popup_99fa6f1097db8266e891f04c3dad35cd = L.popup({"maxWidth": 300});
+
+        
+            var html_0d230fe1c81c274f36edd24118a69752 = $(`<div id="html_0d230fe1c81c274f36edd24118a69752" style="width: 100.0%; height: 100.0%;">             <b>Vancouver Learning Centre</b><br>             Community: Vancouver<br>             Year: 2025<br>             Initiative: Rural Pre-Health Stream<br>             Students reached: 23<br>             Modality: Virtual<br>             Notes: Career panel         </div>`)[0];
+            popup_99fa6f1097db8266e891f04c3dad35cd.setContent(html_0d230fe1c81c274f36edd24118a69752);
+        
+
+        circle_marker_b84f3cd2510548d3be5ba976c8dbb938.bindPopup(popup_99fa6f1097db8266e891f04c3dad35cd)
+        ;
+
+        
+    
+    
+            var marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1 = L.markerClusterGroup(
+                {}
+            );
+            map_8c6d16bc1b48fd09a8a4f3d1334580c7.addLayer(marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1);
+        
+    
+            var marker_cluster_29e3b1a7f222c17f752382bd93cd235e = L.markerClusterGroup(
+                {}
+            );
+            map_8c6d16bc1b48fd09a8a4f3d1334580c7.addLayer(marker_cluster_29e3b1a7f222c17f752382bd93cd235e);
+        
+    
+            var marker_cluster_40c84fff027cd77229941128a99dbdf5 = L.markerClusterGroup(
+                {}
+            );
+            map_8c6d16bc1b48fd09a8a4f3d1334580c7.addLayer(marker_cluster_40c84fff027cd77229941128a99dbdf5);
+        
+    
+            var marker_cluster_3d103e6e494da4367d0de447204f0c9b = L.markerClusterGroup(
+                {}
+            );
+            map_8c6d16bc1b48fd09a8a4f3d1334580c7.addLayer(marker_cluster_3d103e6e494da4367d0de447204f0c9b);
+        
+    
+            var marker_cluster_ae9307164c7a91cc3236b4213a450c50 = L.markerClusterGroup(
+                {}
+            );
+            map_8c6d16bc1b48fd09a8a4f3d1334580c7.addLayer(marker_cluster_ae9307164c7a91cc3236b4213a450c50);
+        
+    
+            var layer_control_bde8294b210b0a2b8989cab892eb700d = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_f574cc03c74091b55f08dc370a790804,
+                },
+                overlays :  {
+                    "2021 \u2014 High School Mentoring" : feature_group_6dd466f8ba6a395c9f68eb731946d1e8,
+                    "2021 \u2014 REAP Presentation" : feature_group_8be47da89198fe7bd9780f3e9b851d5f,
+                    "2021 \u2014 Rural Pre-Health Stream" : feature_group_d0ce82f1b671b2201ce1d21c6c19adab,
+                    "2022 \u2014 High School Mentoring" : feature_group_261fd360912a67bd8a5f53023c6a686e,
+                    "2022 \u2014 REAP Presentation" : feature_group_fde6a766f8dcc65fbf6d7acaa1ee8afe,
+                    "2022 \u2014 Rural Pre-Health Stream" : feature_group_a9886f89ae03fac3eaa2386e5ab2b166,
+                    "2023 \u2014 High School Mentoring" : feature_group_2b875c10a31257073770eae9ff8aa71a,
+                    "2023 \u2014 REAP Presentation" : feature_group_1effce30564dc7bfef7f82bbd488c2d2,
+                    "2023 \u2014 Rural Pre-Health Stream" : feature_group_0d5cb3c3d3a9813b6018aa30382817f1,
+                    "2024 \u2014 High School Mentoring" : feature_group_406fae8c2cc04fe1dfd4dbcb60ed4e36,
+                    "2024 \u2014 REAP Presentation" : feature_group_73fef4acdaa49733cddbc43ff3a93ad3,
+                    "2024 \u2014 Rural Pre-Health Stream" : feature_group_9cbb530178d413b65e92374727f914be,
+                    "2025 \u2014 High School Mentoring" : feature_group_d7012f28195a4ecabbff21b6790ac38e,
+                    "2025 \u2014 REAP Presentation" : feature_group_39d210e366c12623ef4485dcb53a773c,
+                    "2025 \u2014 Rural Pre-Health Stream" : feature_group_8e9ac6b2b82f6f233c1b42bc99f70165,
+                    "2021 \u2014 All initiatives" : marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1,
+                    "2022 \u2014 All initiatives" : marker_cluster_29e3b1a7f222c17f752382bd93cd235e,
+                    "2023 \u2014 All initiatives" : marker_cluster_40c84fff027cd77229941128a99dbdf5,
+                    "2024 \u2014 All initiatives" : marker_cluster_3d103e6e494da4367d0de447204f0c9b,
+                    "2025 \u2014 All initiatives" : marker_cluster_ae9307164c7a91cc3236b4213a450c50,
+                },
+            };
+            L.control.layers(
+                layer_control_bde8294b210b0a2b8989cab892eb700d.base_layers,
+                layer_control_bde8294b210b0a2b8989cab892eb700d.overlays,
+                {"autoZIndex": true, "collapsed": false, "position": "topright"}
+            ).addTo(map_8c6d16bc1b48fd09a8a4f3d1334580c7);
+            feature_group_6dd466f8ba6a395c9f68eb731946d1e8.remove();
+            feature_group_8be47da89198fe7bd9780f3e9b851d5f.remove();
+            feature_group_d0ce82f1b671b2201ce1d21c6c19adab.remove();
+            feature_group_261fd360912a67bd8a5f53023c6a686e.remove();
+            feature_group_fde6a766f8dcc65fbf6d7acaa1ee8afe.remove();
+            feature_group_a9886f89ae03fac3eaa2386e5ab2b166.remove();
+            feature_group_2b875c10a31257073770eae9ff8aa71a.remove();
+            feature_group_1effce30564dc7bfef7f82bbd488c2d2.remove();
+            feature_group_0d5cb3c3d3a9813b6018aa30382817f1.remove();
+            feature_group_406fae8c2cc04fe1dfd4dbcb60ed4e36.remove();
+            feature_group_73fef4acdaa49733cddbc43ff3a93ad3.remove();
+            feature_group_9cbb530178d413b65e92374727f914be.remove();
+            feature_group_d7012f28195a4ecabbff21b6790ac38e.remove();
+            feature_group_39d210e366c12623ef4485dcb53a773c.remove();
+            feature_group_8e9ac6b2b82f6f233c1b42bc99f70165.remove();
+            marker_cluster_e90a8d2a9a128de243ce46b8a9b5d2e1.remove();
+            marker_cluster_29e3b1a7f222c17f752382bd93cd235e.remove();
+            marker_cluster_40c84fff027cd77229941128a99dbdf5.remove();
+            marker_cluster_3d103e6e494da4367d0de447204f0c9b.remove();
+        
+</script>
+</html>
