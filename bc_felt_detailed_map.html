@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b3fa3f66aff22ed9083a8e91fc02c90b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+<div style="position: fixed; 
+            bottom: 50px; left: 50px; width: 180px; height: 80px; 
+            background-color: white; border:2px solid grey; z-index:9999; font-size:14px;
+            ">
+&nbsp;<b>Legend</b><br>
+&nbsp;<i style="background:blue; border-radius:50%; width:10px; height:10px; display:inline-block"></i>&nbsp; Community<br>
+&nbsp;<i style="background:green; border-radius:50%; width:10px; height:10px; display:inline-block"></i>&nbsp; School
+</div>
+    
+            <div class="folium-map" id="map_b3fa3f66aff22ed9083a8e91fc02c90b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b3fa3f66aff22ed9083a8e91fc02c90b = L.map(
+                "map_b3fa3f66aff22ed9083a8e91fc02c90b",
+                {
+                    center: [53.5, -124.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d79919a8e261f77c20fe8237ed3920af = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_b3fa3f66aff22ed9083a8e91fc02c90b);
+        
+    
+            var marker_cluster_0346273732cb70280d52e197d93bf3df = L.markerClusterGroup(
+                {}
+            );
+            map_b3fa3f66aff22ed9083a8e91fc02c90b.addLayer(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+            var circle_marker_1b85644ea0439f7d292c477d44b179e5 = L.circleMarker(
+                [53.9171, -122.7497],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_372e2ea1e051f69adf2860fded651c66 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4626a98e8e4ba1dfc9182a8ef16a9898 = $(`<div id="html_4626a98e8e4ba1dfc9182a8ef16a9898" style="width: 100.0%; height: 100.0%;"><b>Prince George (Community)</b><br>Category: Community<br>Year: 2021<br>Initiative: High School Mentoring</div>`)[0];
+            popup_372e2ea1e051f69adf2860fded651c66.setContent(html_4626a98e8e4ba1dfc9182a8ef16a9898);
+        
+
+        circle_marker_1b85644ea0439f7d292c477d44b179e5.bindPopup(popup_372e2ea1e051f69adf2860fded651c66)
+        ;
+
+        
+    
+    
+            circle_marker_1b85644ea0439f7d292c477d44b179e5.bindTooltip(
+                `<div>
+                     Prince George (Community)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b06217663463d1ba7cd434fdb0a49202 = L.circleMarker(
+                [49.888, -119.496],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_bb2c421c419309a97a1ad8faf0ba4e7e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0b1b4cf184811b0c431e8b94959cb299 = $(`<div id="html_0b1b4cf184811b0c431e8b94959cb299" style="width: 100.0%; height: 100.0%;"><b>Kelowna (Community)</b><br>Category: Community<br>Year: 2022<br>Initiative: Pre-Health Mentoring</div>`)[0];
+            popup_bb2c421c419309a97a1ad8faf0ba4e7e.setContent(html_0b1b4cf184811b0c431e8b94959cb299);
+        
+
+        circle_marker_b06217663463d1ba7cd434fdb0a49202.bindPopup(popup_bb2c421c419309a97a1ad8faf0ba4e7e)
+        ;
+
+        
+    
+    
+            circle_marker_b06217663463d1ba7cd434fdb0a49202.bindTooltip(
+                `<div>
+                     Kelowna (Community)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_874c347d5d2c3befac8febe2905a6f36 = L.circleMarker(
+                [50.6745, -120.3273],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_3ca0c5c57160269ea4df5509e82894c5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_16bdea9a83b18f583593a3f8c743dcc3 = $(`<div id="html_16bdea9a83b18f583593a3f8c743dcc3" style="width: 100.0%; height: 100.0%;"><b>Kamloops (Community)</b><br>Category: Community<br>Year: 2020<br>Initiative: Presentations</div>`)[0];
+            popup_3ca0c5c57160269ea4df5509e82894c5.setContent(html_16bdea9a83b18f583593a3f8c743dcc3);
+        
+
+        circle_marker_874c347d5d2c3befac8febe2905a6f36.bindPopup(popup_3ca0c5c57160269ea4df5509e82894c5)
+        ;
+
+        
+    
+    
+            circle_marker_874c347d5d2c3befac8febe2905a6f36.bindTooltip(
+                `<div>
+                     Kamloops (Community)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ac8382e827aabab959446b88de82ef34 = L.circleMarker(
+                [49.7016, -123.1558],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_044c72b798bd26349c49353e33446373 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac5f3e1a33bf3d53c419fd62a4644c52 = $(`<div id="html_ac5f3e1a33bf3d53c419fd62a4644c52" style="width: 100.0%; height: 100.0%;"><b>Squamish (Community)</b><br>Category: Community<br>Year: 2023<br>Initiative: High School Mentoring</div>`)[0];
+            popup_044c72b798bd26349c49353e33446373.setContent(html_ac5f3e1a33bf3d53c419fd62a4644c52);
+        
+
+        circle_marker_ac8382e827aabab959446b88de82ef34.bindPopup(popup_044c72b798bd26349c49353e33446373)
+        ;
+
+        
+    
+    
+            circle_marker_ac8382e827aabab959446b88de82ef34.bindTooltip(
+                `<div>
+                     Squamish (Community)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4ecc2f01ef1b7c65784258afdaa55754 = L.circleMarker(
+                [49.1659, -123.9401],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_dd204a8d1777a44c0b2fe3fde096658a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ed8e1a7b423523dcfbcb3bd25f2c921 = $(`<div id="html_6ed8e1a7b423523dcfbcb3bd25f2c921" style="width: 100.0%; height: 100.0%;"><b>Nanaimo (Community)</b><br>Category: Community<br>Year: 2021<br>Initiative: Presentations</div>`)[0];
+            popup_dd204a8d1777a44c0b2fe3fde096658a.setContent(html_6ed8e1a7b423523dcfbcb3bd25f2c921);
+        
+
+        circle_marker_4ecc2f01ef1b7c65784258afdaa55754.bindPopup(popup_dd204a8d1777a44c0b2fe3fde096658a)
+        ;
+
+        
+    
+    
+            circle_marker_4ecc2f01ef1b7c65784258afdaa55754.bindTooltip(
+                `<div>
+                     Nanaimo (Community)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_df69adf75bca837d3844366e2b2cb959 = L.circleMarker(
+                [49.3254, -117.666],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_16e580ba17ab83c5f04eed53ccaacd62 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b26471e3215aa52f94aad9c874b04618 = $(`<div id="html_b26471e3215aa52f94aad9c874b04618" style="width: 100.0%; height: 100.0%;"><b>Castlegar (Community)</b><br>Category: Community<br>Year: 2022<br>Initiative: Pre-Health Mentoring</div>`)[0];
+            popup_16e580ba17ab83c5f04eed53ccaacd62.setContent(html_b26471e3215aa52f94aad9c874b04618);
+        
+
+        circle_marker_df69adf75bca837d3844366e2b2cb959.bindPopup(popup_16e580ba17ab83c5f04eed53ccaacd62)
+        ;
+
+        
+    
+    
+            circle_marker_df69adf75bca837d3844366e2b2cb959.bindTooltip(
+                `<div>
+                     Castlegar (Community)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f14058b98681cf67428f38897f5ddf03 = L.circleMarker(
+                [52.1415, -122.1445],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_e8e243859b8001e98e949c0798eafbbd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8afd4cbda31e59fd7fcd82526cd3c35f = $(`<div id="html_8afd4cbda31e59fd7fcd82526cd3c35f" style="width: 100.0%; height: 100.0%;"><b>Williams Lake (Community)</b><br>Category: Community<br>Year: 2023<br>Initiative: High School Mentoring</div>`)[0];
+            popup_e8e243859b8001e98e949c0798eafbbd.setContent(html_8afd4cbda31e59fd7fcd82526cd3c35f);
+        
+
+        circle_marker_f14058b98681cf67428f38897f5ddf03.bindPopup(popup_e8e243859b8001e98e949c0798eafbbd)
+        ;
+
+        
+    
+    
+            circle_marker_f14058b98681cf67428f38897f5ddf03.bindTooltip(
+                `<div>
+                     Williams Lake (Community)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_42fa34ffddeee238cc2b84b5e3fc9fb9 = L.circleMarker(
+                [54.5182, -128.6035],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_3720d0e99052b1f0c5abe2a25b0f534c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b6210f169f7583851183590f82472be0 = $(`<div id="html_b6210f169f7583851183590f82472be0" style="width: 100.0%; height: 100.0%;"><b>Terrace (Community)</b><br>Category: Community<br>Year: 2021<br>Initiative: Presentations</div>`)[0];
+            popup_3720d0e99052b1f0c5abe2a25b0f534c.setContent(html_b6210f169f7583851183590f82472be0);
+        
+
+        circle_marker_42fa34ffddeee238cc2b84b5e3fc9fb9.bindPopup(popup_3720d0e99052b1f0c5abe2a25b0f534c)
+        ;
+
+        
+    
+    
+            circle_marker_42fa34ffddeee238cc2b84b5e3fc9fb9.bindTooltip(
+                `<div>
+                     Terrace (Community)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_58555f9c0dee4577bcfa7f1492c09450 = L.circleMarker(
+                [54.7804, -127.1743],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_67faf204e5eb6d6b29eb8e427b18ad8e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d736a52765ae42bc96327c8ae4d9f77a = $(`<div id="html_d736a52765ae42bc96327c8ae4d9f77a" style="width: 100.0%; height: 100.0%;"><b>Smithers (Community)</b><br>Category: Community<br>Year: 2022<br>Initiative: High School Mentoring</div>`)[0];
+            popup_67faf204e5eb6d6b29eb8e427b18ad8e.setContent(html_d736a52765ae42bc96327c8ae4d9f77a);
+        
+
+        circle_marker_58555f9c0dee4577bcfa7f1492c09450.bindPopup(popup_67faf204e5eb6d6b29eb8e427b18ad8e)
+        ;
+
+        
+    
+    
+            circle_marker_58555f9c0dee4577bcfa7f1492c09450.bindTooltip(
+                `<div>
+                     Smithers (Community)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_50f26783c2bc716ace3d084dac363167 = L.circleMarker(
+                [56.2524, -120.8466],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_0a7d01d8e8822b82134671394dfd3dab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9107ab759b4364dd22915fda75e0b65a = $(`<div id="html_9107ab759b4364dd22915fda75e0b65a" style="width: 100.0%; height: 100.0%;"><b>Fort St. John (Community)</b><br>Category: Community<br>Year: 2023<br>Initiative: Pre-Health Mentoring</div>`)[0];
+            popup_0a7d01d8e8822b82134671394dfd3dab.setContent(html_9107ab759b4364dd22915fda75e0b65a);
+        
+
+        circle_marker_50f26783c2bc716ace3d084dac363167.bindPopup(popup_0a7d01d8e8822b82134671394dfd3dab)
+        ;
+
+        
+    
+    
+            circle_marker_50f26783c2bc716ace3d084dac363167.bindTooltip(
+                `<div>
+                     Fort St. John (Community)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_51c5f1e27fec9b09a70c9dcd24ee8ed2 = L.circleMarker(
+                [49.8864, -119.4786],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_07cabe854a3a7d3791daa9ab25b13004 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_64e45575e77176a44880e5dd1e4e7019 = $(`<div id="html_64e45575e77176a44880e5dd1e4e7019" style="width: 100.0%; height: 100.0%;"><b>Kelowna Secondary School</b><br>Category: School<br>Year: 2022<br>Initiative: Pre-Health Mentoring</div>`)[0];
+            popup_07cabe854a3a7d3791daa9ab25b13004.setContent(html_64e45575e77176a44880e5dd1e4e7019);
+        
+
+        circle_marker_51c5f1e27fec9b09a70c9dcd24ee8ed2.bindPopup(popup_07cabe854a3a7d3791daa9ab25b13004)
+        ;
+
+        
+    
+    
+            circle_marker_51c5f1e27fec9b09a70c9dcd24ee8ed2.bindTooltip(
+                `<div>
+                     Kelowna Secondary School
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c485e65e985c4eb8f410a808ef3f2b3d = L.circleMarker(
+                [53.901, -122.7696],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_acf0c6aacd9f6f00155445362f2e80e2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51b9fcf59febf4e2de6f2a4e2486a7ea = $(`<div id="html_51b9fcf59febf4e2de6f2a4e2486a7ea" style="width: 100.0%; height: 100.0%;"><b>Prince George Secondary</b><br>Category: School<br>Year: 2021<br>Initiative: High School Mentoring</div>`)[0];
+            popup_acf0c6aacd9f6f00155445362f2e80e2.setContent(html_51b9fcf59febf4e2de6f2a4e2486a7ea);
+        
+
+        circle_marker_c485e65e985c4eb8f410a808ef3f2b3d.bindPopup(popup_acf0c6aacd9f6f00155445362f2e80e2)
+        ;
+
+        
+    
+    
+            circle_marker_c485e65e985c4eb8f410a808ef3f2b3d.bindTooltip(
+                `<div>
+                     Prince George Secondary
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9c25353852bfd0ebf5daa9632486a414 = L.circleMarker(
+                [48.4889, -123.3665],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_489ec25b8078fab6ff68c96e51da348a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f901a84c3e11414b4e8d2b2e5cc76597 = $(`<div id="html_f901a84c3e11414b4e8d2b2e5cc76597" style="width: 100.0%; height: 100.0%;"><b>Mount Douglas Secondary (Victoria)</b><br>Category: School<br>Year: 2020<br>Initiative: Presentations</div>`)[0];
+            popup_489ec25b8078fab6ff68c96e51da348a.setContent(html_f901a84c3e11414b4e8d2b2e5cc76597);
+        
+
+        circle_marker_9c25353852bfd0ebf5daa9632486a414.bindPopup(popup_489ec25b8078fab6ff68c96e51da348a)
+        ;
+
+        
+    
+    
+            circle_marker_9c25353852bfd0ebf5daa9632486a414.bindTooltip(
+                `<div>
+                     Mount Douglas Secondary (Victoria)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d5dac9d458f2ef6733876dbe6bf47e84 = L.circleMarker(
+                [49.264, -123.185],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_b47f13dcb1a3b784eeabb2cf4d77ff9a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0003ca13581ecc23a59ca5213f7b427e = $(`<div id="html_0003ca13581ecc23a59ca5213f7b427e" style="width: 100.0%; height: 100.0%;"><b>Lord Byng Secondary (Vancouver)</b><br>Category: School<br>Year: 2023<br>Initiative: High School Mentoring</div>`)[0];
+            popup_b47f13dcb1a3b784eeabb2cf4d77ff9a.setContent(html_0003ca13581ecc23a59ca5213f7b427e);
+        
+
+        circle_marker_d5dac9d458f2ef6733876dbe6bf47e84.bindPopup(popup_b47f13dcb1a3b784eeabb2cf4d77ff9a)
+        ;
+
+        
+    
+    
+            circle_marker_d5dac9d458f2ef6733876dbe6bf47e84.bindTooltip(
+                `<div>
+                     Lord Byng Secondary (Vancouver)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7925a2e99347fcde821d145da39a3634 = L.circleMarker(
+                [49.1596, -123.9537],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_389922b2e22c1a11515dbae54b3cf783 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_058c2cd1e2cfeebfed151b8a3417990d = $(`<div id="html_058c2cd1e2cfeebfed151b8a3417990d" style="width: 100.0%; height: 100.0%;"><b>Nanaimo District Secondary</b><br>Category: School<br>Year: 2021<br>Initiative: Presentations</div>`)[0];
+            popup_389922b2e22c1a11515dbae54b3cf783.setContent(html_058c2cd1e2cfeebfed151b8a3417990d);
+        
+
+        circle_marker_7925a2e99347fcde821d145da39a3634.bindPopup(popup_389922b2e22c1a11515dbae54b3cf783)
+        ;
+
+        
+    
+    
+            circle_marker_7925a2e99347fcde821d145da39a3634.bindTooltip(
+                `<div>
+                     Nanaimo District Secondary
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8565fc9b7934ad5de6669224f506e7b3 = L.circleMarker(
+                [49.1187, -121.9624],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_d6e4cce9d5c351f04658175f997f48fa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_18e7a2847081695d05e6360490f47ad4 = $(`<div id="html_18e7a2847081695d05e6360490f47ad4" style="width: 100.0%; height: 100.0%;"><b>Sardis Secondary (Chilliwack)</b><br>Category: School<br>Year: 2022<br>Initiative: High School Mentoring</div>`)[0];
+            popup_d6e4cce9d5c351f04658175f997f48fa.setContent(html_18e7a2847081695d05e6360490f47ad4);
+        
+
+        circle_marker_8565fc9b7934ad5de6669224f506e7b3.bindPopup(popup_d6e4cce9d5c351f04658175f997f48fa)
+        ;
+
+        
+    
+    
+            circle_marker_8565fc9b7934ad5de6669224f506e7b3.bindTooltip(
+                `<div>
+                     Sardis Secondary (Chilliwack)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8a280f169f87bd10d164ea1c6ec8bd60 = L.circleMarker(
+                [49.0457, -122.3012],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_177d66b37fcbd880c9adffd1707a9594 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b38902932b4e4709c272759eb84bd30 = $(`<div id="html_3b38902932b4e4709c272759eb84bd30" style="width: 100.0%; height: 100.0%;"><b>Abbotsford Senior Secondary</b><br>Category: School<br>Year: 2023<br>Initiative: Presentations</div>`)[0];
+            popup_177d66b37fcbd880c9adffd1707a9594.setContent(html_3b38902932b4e4709c272759eb84bd30);
+        
+
+        circle_marker_8a280f169f87bd10d164ea1c6ec8bd60.bindPopup(popup_177d66b37fcbd880c9adffd1707a9594)
+        ;
+
+        
+    
+    
+            circle_marker_8a280f169f87bd10d164ea1c6ec8bd60.bindTooltip(
+                `<div>
+                     Abbotsford Senior Secondary
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a55cea5c865a18cff911e1e5e2b6d462 = L.circleMarker(
+                [50.7144, -120.3537],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_2d48b215ac60913bee0faeb9a5e3dd46 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1de4267b4211823af20a8e380a944b71 = $(`<div id="html_1de4267b4211823af20a8e380a944b71" style="width: 100.0%; height: 100.0%;"><b>NorKam Secondary (Kamloops)</b><br>Category: School<br>Year: 2020<br>Initiative: High School Mentoring</div>`)[0];
+            popup_2d48b215ac60913bee0faeb9a5e3dd46.setContent(html_1de4267b4211823af20a8e380a944b71);
+        
+
+        circle_marker_a55cea5c865a18cff911e1e5e2b6d462.bindPopup(popup_2d48b215ac60913bee0faeb9a5e3dd46)
+        ;
+
+        
+    
+    
+            circle_marker_a55cea5c865a18cff911e1e5e2b6d462.bindTooltip(
+                `<div>
+                     NorKam Secondary (Kamloops)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f74587dabb097c4787d5913d928cb257 = L.circleMarker(
+                [50.1436, -122.9571],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_aedb8abb4df5c7db01b6c7b701603ddb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ab686b1b5d7c8218476fe9a1ce36bc7 = $(`<div id="html_6ab686b1b5d7c8218476fe9a1ce36bc7" style="width: 100.0%; height: 100.0%;"><b>Whistler Secondary</b><br>Category: School<br>Year: 2023<br>Initiative: Pre-Health Mentoring</div>`)[0];
+            popup_aedb8abb4df5c7db01b6c7b701603ddb.setContent(html_6ab686b1b5d7c8218476fe9a1ce36bc7);
+        
+
+        circle_marker_f74587dabb097c4787d5913d928cb257.bindPopup(popup_aedb8abb4df5c7db01b6c7b701603ddb)
+        ;
+
+        
+    
+    
+            circle_marker_f74587dabb097c4787d5913d928cb257.bindTooltip(
+                `<div>
+                     Whistler Secondary
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f69194a2fc4611b931d2658e9d722302 = L.circleMarker(
+                [49.2998, -117.6612],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_0346273732cb70280d52e197d93bf3df);
+        
+    
+        var popup_134ac2fdca8334476b584d8d58b9a5d4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e89cb6b26550b715eafa3bd060f16040 = $(`<div id="html_e89cb6b26550b715eafa3bd060f16040" style="width: 100.0%; height: 100.0%;"><b>Castlegar Secondary</b><br>Category: School<br>Year: 2021<br>Initiative: Presentations</div>`)[0];
+            popup_134ac2fdca8334476b584d8d58b9a5d4.setContent(html_e89cb6b26550b715eafa3bd060f16040);
+        
+
+        circle_marker_f69194a2fc4611b931d2658e9d722302.bindPopup(popup_134ac2fdca8334476b584d8d58b9a5d4)
+        ;
+
+        
+    
+    
+            circle_marker_f69194a2fc4611b931d2658e9d722302.bindTooltip(
+                `<div>
+                     Castlegar Secondary
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
